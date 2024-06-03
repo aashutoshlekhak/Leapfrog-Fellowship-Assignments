@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Portfolio Website</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="sidebar__image-container">
+          <img
+            src=".//images/profile-image.png"
+            class="sidebar__image"
+            alt="User profile image"
+          />
+        </div>
+        <div class="sidebar__content">
+          <!-- user intro start -->
+          <div class="sidebar__user-intro">
+            <h1 class="sidebar__user-name">Chiara Bianchi</h1>
+            <h2 class="sidebar__job-title">Product Designer</h2>
+          </div>
+
+          <div class="sidebar__quote">
+            <p class="sidebar__quote-text">
+              Design isn’t finished until somebody is using it.
+            </p>
+            <p class="sidebar__quote-author">Brenda Laurel</p>
+          </div>
+
+          <div class="sidebar__divider"></div>
+          <!-- user-info-start -->
+          <div class="sidebar__info">
+            <div class="sidebar__rows">
+              <div class="sidebar__row">
+                <div class="sidebar__icon">
+                  <img src=".//images/email.svg" alt="email" />
+                </div>
+                <div class="sidebar__row-content">
+                  <div class="sidebar__row-title">Email</div>
+                  <div class="sidebar__row-description">
+                    chiara.bianchi @gmail.com
+                  </div>
+                </div>
+              </div>
+
+              <div class="sidebar__row">
+                <div class="sidebar__icon">
+                  <img src=".//images/link-01.svg" alt="link" />
+                </div>
+                <div class="sidebar__row-content">
+                  <div class="sidebar__row-title">Website</div>
+                  <div class="sidebar__row-description">
+                    <a href="#">https://aldesign.it</a>
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__row">
+                <div class="sidebar__icon">
+                  <img src=".//images/phone.svg" alt="phone" />
+                </div>
+                <div class="sidebar__row-content">
+                  <div class="sidebar__row-title">Phone</div>
+                  <div class="sidebar__row-description">(+39) 333 0123 765</div>
+                </div>
+              </div>
+              <div class="sidebar__row">
+                <div class="sidebar__icon">
+                  <img src=".//images/location.svg" alt="location" />
+                </div>
+                <div class="sidebar__row-content">
+                  <div class="sidebar__row-title">Address</div>
+                  <div class="sidebar__row-description">Bologna, Italy</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- user-info end -->
+
+          <div class="sidebar__divider"></div>
+
+          <!-- socials-start -->
+          <div class="sidebar__socials">
+            <h3 class="sidebar__container-title">Socials</h3>
+            <div class="sidebar__rows">
+              <div class="sidebar__row">
+                <div class="sidebar__icon">
+                  <img src="images/instagram.svg" alt="instagram" />
+                </div>
+                <div class="sidebar__row-content">
+                  <div class="sidebar__row-title">Instagram</div>
+                  <div class="sidebar__row-description">@chiara.designs</div>
+                </div>
+              </div>
+              <div class="sidebar__row">
+                <div class="sidebar__icon">
+                  <img src="images/twitter.svg" alt="twitter" />
+                </div>
+                <div class="sidebar__row-content">
+                  <div class="sidebar__row-title">Twitter</div>
+                  <div class="sidebar__row-description">@chiaradesigns</div>
+                </div>
+              </div>
+              <div class="sidebar__row">
+                <div class="sidebar__icon">
+                  <img src="images/dribble.svg" alt="dribble" />
+                </div>
+                <div class="sidebar__row-content">
+                  <div class="sidebar__row-title">Dribble</div>
+                  <div class="sidebar__row-description">@chiara-designs</div>
+                </div>
+              </div>
+              <div class="sidebar__row">
+                <div class="sidebar__icon">
+                  <img src="images/linkedin.svg" alt="linkedin" />
+                </div>
+                <div class="sidebar__row-content">
+                  <div class="sidebar__row-title">LinkedIn</div>
+                  <div class="sidebar__row-description">
+                    @chiara-bianchi-123
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- socials end -->
+
+          <div class="sidebar__divider"></div>
+
+          <!-- languages start -->
+          <div class="sidebar__languages">
+            <h3 class="sidebar__container-title">Languages</h3>
+            <div class="sidebar__rows">
+              <div class="sidebar__row">
+                <div class="sidebar__icon sidebar__icon--flat">
+                  <img src="images/italy.svg" alt="italian" />
+                </div>
+                <div class="sidebar__row-content">
+                  <div class="sidebar__row-title sidebar__row-title--bold">
+                    Italian
+                  </div>
+                  <div
+                    class="sidebar__row-description sidebar__row-description--faded"
+                  >
+                    Native
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__row">
+                <div class="sidebar__icon sidebar__icon--flat">
+                  <img src="images/greece.svg" alt="greek" />
+                </div>
+                <div class="sidebar__row-content">
+                  <div class="sidebar__row-title sidebar__row-title--bold">
+                    Greek
+                  </div>
+                  <div
+                    class="sidebar__row-description sidebar__row-description--faded"
+                  >
+                    Native
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__row">
+                <div class="sidebar__icon sidebar__icon--flat">
+                  <img src="images/english.svg" alt="english" />
+                </div>
+                <div class="sidebar__row-content">
+                  <div class="sidebar__row-title sidebar__row-title--bold">
+                    English
+                  </div>
+                  <div
+                    class="sidebar__row-description sidebar__row-description--faded"
+                  >
+                    Professional working
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__row">
+                <div class="sidebar__icon sidebar__icon--flat">
+                  <img src="images/spanish.svg" alt="spanish" />
+                </div>
+                <div class="sidebar__row-content">
+                  <div class="sidebar__row-title sidebar__row-title--bold">
+                    Spanish
+                  </div>
+                  <div
+                    class="sidebar__row-description sidebar__row-description--faded"
+                  >
+                    Elementary
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- languages end -->
+        </div>
+      </aside>
+
+      <section class="main">
+        <section class="projects main__body">
+          <div class="main__timeline">
+            <div class="timeline__circle">
+              <img src="images/dot_04_l.svg" alt="" />
+            </div>
+            <div class="timeline__divider">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="timeline__divider-svg"
+                width="2"
+                fill="none"
+              >
+                <rect
+                  x="0.788078"
+                  y="1.22222"
+                  width="0.50505"
+                  height="100%"
+                  stroke="#E2E6EE"
+                  stroke-width="0.50505"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="main__content">
+            <h2 class="main__title">Latest projects</h2>
+            <div class="projects__cards">
+              <div class="projects__card">
+                <div class="projects__card-top">
+                  <div class="projects__icon">
+                    <img src=".//images/figma.svg" alt="figma" />
+                  </div>
+                  <div class="projects__info">
+                    <h3 class="projects__name">Powerful Design System</h3>
+                    <p class="projects__description">
+                      Figma UI Kit and Design System targeting a wide variety of
+                      use cases.
+                    </p>
+                  </div>
+                </div>
+                <div class="projects__card-bottom">
+                  <div class="projects__link-icon">
+                    <img src="images/figma-link.svg" alt="figma-link" />
+                  </div>
+                  <a href="https://figma.com" class="projects__link"
+                    >https://figma.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="projects__card">
+                <div class="projects__card-top">
+                  <div class="projects__icon">
+                    <img src=".//images/chakra-ui.svg" alt="figma" />
+                  </div>
+                  <div class="projects__info">
+                    <h3 class="projects__name">Modern Website</h3>
+                    <p class="projects__description">
+                      Powerful website + dashboard template for your next Chakra
+                      UI project.
+                    </p>
+                  </div>
+                </div>
+                <div class="projects__card-bottom">
+                  <div class="projects__link-icon">
+                    <img src="images/link_02.svg" alt="figma-link" />
+                  </div>
+                  <a href="https://ui-8.net" class="projects__link"
+                    >https://ui-8.net</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience Section Start -->
+        <section class="experience main__body main-body__section">
+          <div class="main__timeline">
+            <div class="timeline__circle">
+              <img src="images/dot_04_l.svg" alt="" />
+            </div>
+            <div class="timeline__divider">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="timeline__divider-svg"
+                width="2"
+                fill="none"
+              >
+                <rect
+                  x="0.788078"
+                  y="1.22222"
+                  width="0.50505"
+                  height="100%"
+                  stroke="#E2E6EE"
+                  stroke-width="0.50505"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="main__content">
+            <h2 class="main__title">Experience</h2>
+            <div class="experience__cards">
+              <div class="experience__card">
+                <div class="experience__sub-timeline">
+                  <div class="experience__sub-timeline-dot">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        d="M7.64656 10.9849C5.90323 10.9849 4.48999 9.57161 4.48999 7.82829C4.48999 6.08497 5.90323 4.67172 7.64656 4.67172C9.38988 4.67172 10.8031 6.08497 10.8031 7.82829C10.8031 9.57161 9.38988 10.9849 7.64656 10.9849Z"
+                        fill="#2E2E48"
+                      />
+                    </svg>
+                  </div>
+                  <div class="experience__sub-timeline-divider">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="experience__divider-svg"
+                      width="2"
+                      viewBox="0 0 2 61"
+                      fill="none"
+                    >
+                      <rect
+                        x="0.394035"
+                        y="1.20203"
+                        width="0.50505"
+                        height="100%"
+                        stroke="#F7F9FC"
+                        stroke-width="0.50505"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="experience__card-content">
+                  <div class="experience__card-left">
+                    <p>
+                      <span class="experience__date">Jul 2022 - Jan 2022</span>
+                      <span class="experience__location">
+                        <i class="fa-solid fa-location-dot"></i> Cupertino
+                      </span>
+                    </p>
+                    <div class="experience__card-detail">
+                      <div class="experience__icon">
+                        <img src=".//images/apple.svg" alt="" />
+                      </div>
+                      <div class="experience__text">
+                        <p class="experience__job-title">Product Designer</p>
+                        <p class="experience__company">Apple</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="experience__card-right">
+                    <p>
+                      Omnis minima inventore minus. Aut et incidunt. Aut fugiat
+                      culpa illum optio dolorum aut maxime ipsa. Laborum
+                      incidunt enim consectetur perspiciatis. Dolore ullam dolor
+                      impedit dolorum recusandae facilis quo et. Et ipsam vel
+                      sunt qui ut officia voluptatem.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="experience__card">
+                <div class="experience__sub-timeline">
+                  <div class="experience__sub-timeline-dot">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        d="M7.64656 10.9849C5.90323 10.9849 4.48999 9.57161 4.48999 7.82829C4.48999 6.08497 5.90323 4.67172 7.64656 4.67172C9.38988 4.67172 10.8031 6.08497 10.8031 7.82829C10.8031 9.57161 9.38988 10.9849 7.64656 10.9849Z"
+                        fill="#2E2E48"
+                      />
+                    </svg>
+                  </div>
+                  <div class="experience__sub-timeline-divider">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="experience__divider-svg"
+                      width="2"
+                      viewBox="0 0 2 61"
+                      fill="none"
+                    >
+                      <rect
+                        x="0.394035"
+                        y="1.20203"
+                        width="0.50505"
+                        height="100%"
+                        stroke="#F7F9FC"
+                        stroke-width="0.50505"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="experience__card-content">
+                  <div class="experience__card-left">
+                    <p>
+                      <span class="experience__date">Oct 2015 - Mar 2020</span>
+                      <span class="experience__location">
+                        <i class="fa-solid fa-location-dot"></i> Austin
+                      </span>
+                    </p>
+                    <div class="experience__card-detail">
+                      <div class="experience__icon">
+                        <img src=".//images/tesla.svg" alt="" />
+                      </div>
+                      <div class="experience__text">
+                        <p class="experience__job-title">UX Designer</p>
+                        <p class="experience__company">Tesla</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="experience__card-right">
+                    <p>
+                      Commodi atque sit ut qui assumenda earum aperiam occaecati
+                      voluptates. Fuga quas aut soluta nostrum et beatae.
+                      Maiores repudiandae quibusdam autem enim ut in possimus
+                      ad.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="experience__card">
+                <div class="experience__sub-timeline">
+                  <div class="experience__sub-timeline-dot">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        d="M7.64656 10.9849C5.90323 10.9849 4.48999 9.57161 4.48999 7.82829C4.48999 6.08497 5.90323 4.67172 7.64656 4.67172C9.38988 4.67172 10.8031 6.08497 10.8031 7.82829C10.8031 9.57161 9.38988 10.9849 7.64656 10.9849Z"
+                        fill="#2E2E48"
+                      />
+                    </svg>
+                  </div>
+                  <div class="experience__sub-timeline-divider">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="experience__divider-svg"
+                      width="2"
+                      viewBox="0 0 2 61"
+                      fill="none"
+                    >
+                      <rect
+                        x="0.394035"
+                        y="1.20203"
+                        width="0.50505"
+                        height="100%"
+                        stroke="#F7F9FC"
+                        stroke-width="0.50505"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="experience__card-content">
+                  <div class="experience__card-left">
+                    <p>
+                      <span class="experience__date">Sep 2014 - Aug 2015</span>
+                      <span class="experience__location">
+                        <i class="fa-solid fa-location-dot"></i> Mountain View
+                      </span>
+                    </p>
+                    <div class="experience__card-detail">
+                      <div class="experience__icon">
+                        <img src=".//images/google.svg" alt="" />
+                      </div>
+                      <div class="experience__text">
+                        <p class="experience__job-title">
+                          Design system architect
+                        </p>
+                        <p class="experience__company">Google</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="experience__card-right">
+                    <p>
+                      Ut molestias animi. Neque voluptate velit corporis
+                      adipisci voluptate et qui sed neque. Inventore eos non.
+                      Qui eveniet quo incidunt nemo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="experience__card">
+                <div class="experience__sub-timeline">
+                  <div class="experience__sub-timeline-dot">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        d="M7.64656 10.9849C5.90323 10.9849 4.48999 9.57161 4.48999 7.82829C4.48999 6.08497 5.90323 4.67172 7.64656 4.67172C9.38988 4.67172 10.8031 6.08497 10.8031 7.82829C10.8031 9.57161 9.38988 10.9849 7.64656 10.9849Z"
+                        fill="#2E2E48"
+                      />
+                    </svg>
+                  </div>
+                  <div class="experience__sub-timeline-divider">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="experience__divider-svg"
+                      width="2"
+                      viewBox="0 0 2 61"
+                      fill="none"
+                    >
+                      <rect
+                        x="0.394035"
+                        y="1.20203"
+                        width="0.50505"
+                        height="100%"
+                        stroke="#F7F9FC"
+                        stroke-width="0.50505"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="experience__card-content">
+                  <div class="experience__card-left">
+                    <p>
+                      <span class="experience__date">Sep 2010 - Jul 2013</span>
+                      <span class="experience__location">
+                        <i class="fa-solid fa-location-dot"></i> Berlin
+                      </span>
+                    </p>
+                    <div class="experience__card-detail">
+                      <div class="experience__icon">
+                        <img src=".//images/vectonator.svg" alt="" />
+                      </div>
+                      <div class="experience__text">
+                        <p class="experience__job-title">
+                          Design system architect
+                        </p>
+                        <p class="experience__company">Vectornator</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="experience__card-right">
+                    <p>
+                      Non in fugiat aut consequatur deleniti. Consequuntur
+                      impedit modi asperiores impedit ut ea aut eligendi
+                      doloremque. Fugit laborum ducimus hic tempore velit. Sed
+                      vitae et corrupti omnis temporibus. Unde voluptas quaerat
+                      ea rerum aspernatur autem assumenda animi fugit. Omnis
+                      laborum velit voluptatum similique accusantium eveniet
+                      voluptatem.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="education main__body">
+          <div class="main__timeline">
+            <div class="timeline__circle">
+              <img src="images/dot_04_l.svg" alt="" />
+            </div>
+            <div class="timeline__divider">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="timeline__divider-svg"
+                width="2"
+                fill="none"
+              >
+                <rect
+                  x="0.788078"
+                  y="1.22222"
+                  width="0.50505"
+                  height="100%"
+                  stroke="#E2E6EE"
+                  stroke-width="0.50505"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="main__content">
+            <h2 class="main__title">Education</h2>
+
+            <div class="education__cards-container">
+              <div class="education__card">
+                <div class="education__card-title">
+                  <div class="education__icon">
+                    <img src="images/memorisely.svg" alt="" />
+                  </div>
+                  <p class="education__institute">Memorisely</p>
+                </div>
+                <div class="education__description">
+                  <p class="education__title">Build a design system</p>
+                  <p class="education__date">Oct 2021</p>
+                </div>
+              </div>
+              <div class="education__card">
+                <div class="education__card-title">
+                  <div class="education__icon">
+                    <img src="images/ux-academy.svg" alt="" />
+                  </div>
+                  <p class="education__institute">UX academy</p>
+                </div>
+                <div class="education__description">
+                  <p class="education__title">UX Design Certificate</p>
+                  <p class="education__date">Feb 2020</p>
+                </div>
+              </div>
+              <div class="education__card">
+                <div class="education__card-title">
+                  <div class="education__icon">
+                    <img src="images/coursera.svg" alt="" />
+                  </div>
+                  <p class="education__institute">Coursera</p>
+                </div>
+                <div class="education__description">
+                  <p class="education__title">User research course</p>
+                  <p class="education__date">Dec 2019</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills section start -->
+        <section class="skills-section main__body">
+          <div class="main__timeline">
+            <div class="timeline__circle">
+              <img src="images/dot_04_l.svg" alt="" />
+            </div>
+            <div class="timeline__divider">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="timeline__divider-svg"
+                width="2"
+                fill="none"
+              >
+                <rect
+                  x="0.788078"
+                  y="1.22222"
+                  width="0.50505"
+                  height="100%"
+                  stroke="#E2E6EE"
+                  stroke-width="0.50505"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="main__content">
+            <h2 class="main__title">Skills</h2>
+
+            <div class="skills__cards-container">
+              <div class="skills__card">
+                <div class="skills__card-header">
+                  <div class="skills__card-icon">
+                    <img src=".//images/design-icon.svg" alt="" />
+                  </div>
+                  <p class="skills__card-title">Design</p>
+                </div>
+                <div class="skills__card-body">
+                  <div class="skills__item skills__item--two">
+                    <div>Web Design</div>
+                    <div>Mobile Design</div>
+                  </div>
+                  <div class="skills__item skills__item--single">
+                    <div>User Experience</div>
+                  </div>
+                  <div class="skills__item skills__item--list">
+                    <ul>
+                      <li>Wireframing</li>
+                      <li>Prototyping</li>
+                      <li>Testing</li>
+                    </ul>
+                  </div>
+                  <div class="skills__item skills__item--single">
+                    <div>Design System</div>
+                  </div>
+                </div>
+              </div>
+              <div class="skills__card">
+                <div class="skills__card-header">
+                  <div class="skills__card-icon skills__card-icon--blue">
+                    <img src=".//images/development-icon.svg" alt="" />
+                  </div>
+                  <div class="skills__card-title">Design</div>
+                </div>
+                <div class="skills__card-body">
+                  <div class="skills__item skills__item--single">
+                    <div>React JS</div>
+                  </div>
+                  <div class="skills__item skills__item--list">
+                    <ul>
+                      <li>Chakra UI</li>
+                      <li>Emotion</li>
+                      <li>Framer</li>
+                    </ul>
+                  </div>
+                  <div class="skills__item skills__item--two">
+                    <div>Type script</div>
+                    <div>Next JS</div>
+                  </div>
+                  <div class="skills__item skills__item--three">
+                    <div class="skills__item-three-left">
+                      <div>HTML</div>
+                    </div>
+                    <div class="skills__item-three-right">
+                      <div>CSS</div>
+                      <div class="skills__divider"></div>
+                      <div>JS</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Skills section end -->
+
+        <!-- Tools-section-start -->
+        <section class="tools main__body">
+          <div class="main__timeline">
+            <div class="timeline__circle">
+              <img src="images/dot_04_l.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="main__content">
+            <h2 class="main__title">Tools</h2>
+            <div class="tools__cards-container">
+              <div class="tools__card">
+                <div class="tools__card-icon">
+                  <img src="images/figma-logo-icon.png" alt="" />
+                </div>
+                <p class="tools__card-title">Figma</p>
+                <p class="tools__card-description">UI Design prototyping</p>
+              </div>
+              <div class="tools__card">
+                <div class="tools__card-icon">
+                  <img src="images/maze.png" alt="" />
+                </div>
+                <p class="tools__card-title">Maze</p>
+                <p class="tools__card-description">Product research</p>
+              </div>
+              <div class="tools__card">
+                <div class="tools__card-icon">
+                  <img src="images/spline.png" alt="" />
+                </div>
+                <p class="tools__card-title">Spline</p>
+                <p class="tools__card-description">3D design</p>
+              </div>
+              <div class="tools__card">
+                <div class="tools__card-icon">
+                  <img src="images/Vectonator.png" alt="" />
+                </div>
+                <p class="tools__card-title">Vectonator</p>
+                <p class="tools__card-description">Graphic Design</p>
+              </div>
+              <div class="tools__card">
+                <div class="tools__card-icon">
+                  <img src="images/Rotato.png" alt="" />
+                </div>
+                <p class="tools__card-title">Rotato</p>
+                <p class="tools__card-description">Mockups</p>
+              </div>
+              <div class="tools__card">
+                <div class="tools__card-icon">
+                  <img src="images/Zeplin.png" alt="" />
+                </div>
+                <p class="tools__card-title">Zeplin</p>
+                <p class="tools__card-description">Design workspace</p>
+              </div>
+              <div class="tools__card">
+                <div class="tools__card-icon">
+                  <img src="images/vs-code-logo.png" alt="" />
+                </div>
+                <p class="tools__card-title">VS code</p>
+                <p class="tools__card-description">Code editor</p>
+              </div>
+              <div class="tools__card">
+                <div class="tools__card-icon">
+                  <img src="images/x-code logo.png" alt="" />
+                </div>
+                <p class="tools__card-title">Xcode</p>
+                <p class="tools__card-description">iOS development</p>
+              </div>
+              <div class="tools__card">
+                <div class="tools__card-icon">
+                  <img src="images/notion-logo.png" alt="" />
+                </div>
+                <p class="tools__card-title">Notion</p>
+                <p class="tools__card-description">Project management</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Tools section end -->
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
