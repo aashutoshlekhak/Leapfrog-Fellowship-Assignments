@@ -504,6 +504,7 @@ h2 {
   font-weight: 300;
   line-height: normal;
   letter-spacing: 0.1px;
+  text-align: justify;
 }
 
 /* Education Section */
@@ -795,5 +796,24 @@ h2 {
   }
   .experience-card-right {
     width: 90%;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .skills-cards-container > .skills-card {
+    font-size: 12px !important;
+  }
+  .two-skills {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .two-skills > div:first-child {
+    border-bottom: 1px solid var(--Gray-Lightest, #e2e6ee);
+    border-right: 0 !important;
+    padding-bottom: 10px;
+  }
+  .experience-card-left {
+    width: 100%;
   }
 }
