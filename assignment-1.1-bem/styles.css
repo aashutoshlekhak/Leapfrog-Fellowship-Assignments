@@ -742,6 +742,9 @@ h2 {
     border-bottom-width: 50%;
     padding-bottom: 10px;
   }
+  .experience__card-left {
+    width: 100%;
+  }
 }
 
 /* for mobile and tablet */
@@ -792,5 +795,22 @@ h2 {
     border-bottom: 1px solid var(--Gray-Lightest, #e2e6ee);
     border-right: 0 !important;
     padding-bottom: 10px;
+  }
+
+  .experience__card-left {
+    width: 100%;
+  }
+  .sidebar__icon {
+    width: 25px;
+    height: 25px;
+  }
+  .sidebar__row-title {
+    font-size: 12px;
+  }
+  .sidebar__row-description {
+    font-size: 12px;
+  }
+  .sidebar__row {
+    font-size: 12px;
   }
 }
