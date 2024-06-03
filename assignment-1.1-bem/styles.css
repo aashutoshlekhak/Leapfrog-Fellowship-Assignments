@@ -472,8 +472,6 @@ h2 {
 }
 
 .experience__card-right {
-  display: flex;
-  flex-direction: column;
   gap: 8px;
   width: 100%;
 }
@@ -486,8 +484,8 @@ h2 {
   font-weight: 300;
   line-height: normal;
   letter-spacing: 0.1px;
+  text-align: justify;
 }
-
 
 .education__cards-container {
   display: flex;
@@ -550,12 +548,12 @@ h2 {
 
 /*  educaation section end */
 
-
 /* Skills Section */
 .skills__cards-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  overflow-y: auto;
 }
 
 .skills__card-icon {
@@ -662,7 +660,6 @@ h2 {
   border-top: 1px solid var(--Gray-Lightest, #e2e6ee);
 }
 
-
 /* tools container */
 .tools__cards-container {
   display: flex;
@@ -687,7 +684,7 @@ h2 {
 }
 
 .tools__card-icon {
-   /* empty for now */
+  /* empty for now */
 }
 
 .tools__card-title {
@@ -709,7 +706,6 @@ h2 {
   line-height: normal;
   letter-spacing: 0.101px;
 }
-
 
 @media only screen and (min-width: 600px) {
   .container {
@@ -765,11 +761,11 @@ h2 {
   }
 
   .experience__card-content {
-    width: 90%;
+    width: 100%;
     flex-direction: row;
   }
   .experience__card-right {
-    width: 90%;
+    width: 100%;
   }
   .education__cards-container {
     flex-direction: row;
@@ -780,5 +776,21 @@ h2 {
   }
   .skills__card-body {
     flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 528px) {
+  .skills__cards-container {
+    font-size: 12px;
+  }
+  .skills__item--two {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .skills__item--two > div:first-child {
+    border-bottom: 1px solid var(--Gray-Lightest, #e2e6ee);
+    border-right: 0 !important;
+    padding-bottom: 10px;
   }
 }
