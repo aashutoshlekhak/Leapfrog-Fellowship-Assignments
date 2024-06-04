@@ -59,19 +59,30 @@
 }
 
 @media screen and (min-width: 700px) {
+  .footer {
+    align-items: center;
+    gap: 20px;
+  }
   .footer__body {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    width: 90%;
 
     &__button {
       width: fit-content;
       height: fit-content;
     }
   }
+  .footer__social-links {
+    width: 80%;
+  }
 }
 @media screen and (min-width: 1440px) {
   .footer {
     padding: 24px calc((100vw - 1440px) / 2);
+    &__body {
+      width: 80%;
+    }
   }
 }
