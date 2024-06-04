@@ -61,9 +61,11 @@
   display: inline-block;
   border: none;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .btn:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 :root {
@@ -129,9 +131,11 @@
   display: inline-block;
   border: none;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .btn:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 #theme-switch {
@@ -294,9 +298,11 @@
   display: inline-block;
   border: none;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .btn:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 @keyframes slideInLeftBounce {
@@ -469,6 +475,9 @@
 }
 
 @media screen and (min-width: 615px) {
+  .intro {
+    padding: 70px 24px 24px 24px;
+  }
   .intro__social-links {
     margin-top: 40px;
     margin-bottom: 140px;
@@ -575,9 +584,11 @@
   display: inline-block;
   border: none;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .btn:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .project {
@@ -826,9 +837,11 @@
   display: inline-block;
   border: none;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .btn:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .tools {
@@ -1040,9 +1053,11 @@
   display: inline-block;
   border: none;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .btn:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .footer {
