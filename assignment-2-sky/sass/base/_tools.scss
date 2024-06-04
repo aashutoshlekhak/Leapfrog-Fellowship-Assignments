@@ -1,0 +1,122 @@
+@import "theme";
+@import "components";
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  padding: 35px 24px 27px 24px;
+  background-color: var(--tools-background-color);
+  &__title {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 142.687%; /* 34.245px */
+    letter-spacing: 0.96px;
+    color: var(--tools-title-color);
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    margin-top: 50px;
+  }
+  &__divider {
+    height: 1px;
+    border: none;
+    background-color: var(--tools-divider-color);
+  }
+  &__load-more-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 43px;
+    border: none;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 146.687%; /* 20.536px */
+    letter-spacing: 0.07px;
+    margin-top: 68px;
+  }
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__image {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 5px 4px 31px 0px rgba(0, 0, 0, 0.07);
+    background-color: var(--tool-image-background-color);
+    &--icon {
+      width: 100%;
+      height: 100%;
+    }
+    &--first {
+      position: absolute;
+      margin-left: 30px;
+    }
+    &--last {
+    }
+  }
+  &__name {
+    color: var(--tools-title-color);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 172.687%; /* 34.537px */
+    letter-spacing: 0.1px;
+  }
+  &__description {
+    color: var(--tools-text-color);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 190.4%; /* 26.656px */
+    letter-spacing: 0.07px;
+  }
+  &--two {
+    display: relative;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .tools__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+  }
+  .tool {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+  }
+  .tools {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+  .tools__divider {
+    display: none;
+  }
+  #tools__center-divider {
+    display: flex;
+    width: 100%;
+  }
+}

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/main.css" />
+    <title>Nanang Prasetya</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header and navbar -->
+      <header class="header">
+        <div class="header__logo">
+          <img
+            src=".//assets/header-footer-images/biscuit.svg"
+            alt="Biscuit Logo"
+            class="header__logo-image"
+          />
+        </div>
+
+        <div class="header__right">
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">About</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Work</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__emoji-button">
+            <button id="theme-switch">🌚</button>
+          </div>
+          <div class="header__menu">
+            <button class="btn header__menu-button" id="menuButton">
+              MENU
+            </button>
+          </div>
+        </div>
+      </header>
+      <!-- main intro section -->
+      <main class="main">
+        <section class="intro">
+          <div class="intro__wrapper">
+            <div class="intro__profile-picture">
+              <img
+                src="./assets/header-footer-images/user-image.png"
+                alt="Profile Picture of Nanang Prasetya"
+                class="intro__profile-picture-image"
+              />
+            </div>
+            <h1 class="intro__name">Hi, I’m Nanang Prasetya</h1>
+            <h2 class="intro__title">
+              UI/UX Designer and Software Development
+            </h2>
+            <p class="intro__description">
+              I’m from Indonesia and I have been working (Freelance) as a
+              Software Development especially in the UI/UX Designer and
+              Development for more than 2 year at
+              <span class="intro__link"
+                ><a href="#" class="intro__link">Panemu Indonesia</a></span
+              >
+              company.
+            </p>
+            <div class="intro__buttons">
+              <button class="btn intro__button intro__button--say-hello">
+                Say Hello
+              </button>
+              <a href="#" class="intro__button intro__button--download-cv"
+                ><svg
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="download">
+                    <path
+                      id="Vector (Stroke)"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.5 14C4.05228 14 4.5 14.4477 4.5 15V19C4.5 19.2652 4.60536 19.5196 4.79289 19.7071C4.98043 19.8946 5.23478 20 5.5 20H19.5C19.7652 20 20.0196 19.8946 20.2071 19.7071C20.3946 19.5196 20.5 19.2652 20.5 19V15C20.5 14.4477 20.9477 14 21.5 14C22.0523 14 22.5 14.4477 22.5 15V19C22.5 19.7957 22.1839 20.5587 21.6213 21.1213C21.0587 21.6839 20.2957 22 19.5 22H5.5C4.70435 22 3.94129 21.6839 3.37868 21.1213C2.81607 20.5587 2.5 19.7956 2.5 19V15C2.5 14.4477 2.94772 14 3.5 14Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      id="Vector (Stroke)_2"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.79289 9.29289C7.18342 8.90237 7.81658 8.90237 8.20711 9.29289L12.5 13.5858L16.7929 9.29289C17.1834 8.90237 17.8166 8.90237 18.2071 9.29289C18.5976 9.68342 18.5976 10.3166 18.2071 10.7071L13.2071 15.7071C12.8166 16.0976 12.1834 16.0976 11.7929 15.7071L6.79289 10.7071C6.40237 10.3166 6.40237 9.68342 6.79289 9.29289Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      id="Vector (Stroke)_3"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.5 2C13.0523 2 13.5 2.44772 13.5 3V15C13.5 15.5523 13.0523 16 12.5 16C11.9477 16 11.5 15.5523 11.5 15V3C11.5 2.44772 11.9477 2 12.5 2Z"
+                      fill="currentColor"
+                    />
+                  </g>
+                </svg>
+                Download CV</a
+              >
+            </div>
+            <div class="intro__social-links">
+              <a href="#" class="intro__social-links--icon"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="intro__social-links--icon"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="intro__social-links--icon"
+                ><i class="fa-solid fa-basketball"></i
+              ></a>
+              <a href="#" class="intro__social-links--icon"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </section>
+        <!-- section projects -->
+        <section class="projects">
+          <div class="project">
+            <div class="project__content">
+              <div class="project__badge">
+                <div class="project__badge__img">
+                  <img
+                    src=".//assets/body-images/green-bag.svg"
+                    alt="marketplace"
+                    class="project__badge__img--icon"
+                  />
+                </div>
+                <p class="project__badge--text">Marketplace</p>
+              </div>
+              <div class="project__header">
+                <div class="project__header-logo">
+                  <img
+                    src=".//assets/body-images/tuku.svg"
+                    alt="Panemu Logo"
+                    class="project__header-logo--img"
+                  />
+                </div>
+                <h2 class="project__header--text">Tuku Ternak</h2>
+              </div>
+              <p class="project__description">
+                Tuku Ternak is an application that is engaged in animal
+                husbandry e-commerce (selling various livestock products) that
+                applies business concepts and empowerment of breeders and MSMEs.
+              </p>
+              <div class="project__technologies">
+                <img
+                  src=".//assets/body-images/figma.svg"
+                  alt="Figma"
+                  class="project__technologies-icon"
+                />
+                <div class="project__technologies-icon">
+                  <img
+                    src=".//assets/body-images/whimsical.png"
+                    alt="Whimsical"
+                    class="project__technologies-icon"
+                  />
+                </div>
+
+                <img
+                  src=".//assets/body-images/pink-linkedin.svg"
+                  alt="Linkedin"
+                  class="project__technology-icon"
+                />
+                <img
+                  src=".//assets/body-images/flutter.svg"
+                  alt="dart"
+                  class="project__technology-icon"
+                />
+                <img
+                  src=".//assets/body-images/firebase.svg"
+                  alt="firebase"
+                  class="project__technology-icon"
+                />
+                <img
+                  src=".//assets/body-images/git.svg"
+                  alt="git"
+                  class="project__technology-icon"
+                />
+              </div>
+              <div class="project__button">
+                <button class="btn project__button--btn">Study Case</button>
+              </div>
+            </div>
+            <div class="project__image">
+              <img
+                src="./assets/body-images/card-image-1.png"
+                alt="Tuku Ternak Screenshots"
+                class="project__image-content"
+              />
+            </div>
+          </div>
+          <div class="project">
+            <div class="project__content">
+              <div class="project__badge">
+                <div class="project__badge__img">
+                  <img
+                    src=".//assets/body-images/ticketing.svg"
+                    alt="ticketing"
+                    class="project__badge__img--icon"
+                  />
+                </div>
+                <p class="project__badge--text">Ticketing</p>
+              </div>
+              <div class="project__header">
+                <div class="project__header-logo project__header-logo--white">
+                  <img
+                    src=".//assets/body-images/ticketing.svg"
+                    alt="ticketing"
+                    class="project__header-logo--img"
+                  />
+                </div>
+                <h2 class="project__header--text">Event Id</h2>
+              </div>
+              <p class="project__description">
+                Event Id is a Ticketing Management Service (TMS) superior
+                technology in supporting all event organizers from distribution
+                & ticket management, to providing event analysis reports at the
+                end of the event.
+              </p>
+              <div class="project__technologies">
+                <img
+                  src=".//assets/body-images/figma.svg"
+                  alt="Figma"
+                  class="project__technologies-icon"
+                />
+                <div class="project__technologies-icon">
+                  <img
+                    src=".//assets/body-images/whimsical.png"
+                    alt="Whimsical"
+                    class="project__technologies-icon"
+                  />
+                </div>
+
+                <img
+                  src=".//assets/body-images/pink-linkedin.svg"
+                  alt="Linkedin"
+                  class="project__technology-icon"
+                />
+              </div>
+              <div class="project__button">
+                <button class="btn project__button--btn">Study Case</button>
+              </div>
+            </div>
+            <div class="project__image">
+              <img
+                src="./assets/body-images/card-image-2.png"
+                alt="Tuku Ternak Screenshots"
+                class="project__image-content"
+              />
+            </div>
+          </div>
+          <div class="project">
+            <div class="project__content">
+              <div class="project__badge">
+                <div class="project__badge__img">
+                  <img
+                    src=".//assets/body-images/health.svg"
+                    alt="health"
+                    class="project__badge__img--icon"
+                  />
+                </div>
+                <p class="project__badge--text">Health</p>
+              </div>
+              <div class="project__header">
+                <div class="project__header-logo project__header-logo-white">
+                  <img
+                    src=".//assets/body-images/medica.svg"
+                    alt="Medica logo"
+                    class="project__header-logo--img"
+                  />
+                </div>
+                <h2 class="project__header--text">Medica</h2>
+              </div>
+              <p class="project__description">
+                Medica is the Web Desgin for Commercial and Residential Room
+                Disinfection, Decontamination Services Eliminating 99.999% of
+                bacteria, viruses, spores using international standard products.
+              </p>
+              <div class="project__technologies">
+                <img
+                  src=".//assets/body-images/figma.svg"
+                  alt="Figma"
+                  class="project__technologies-icon"
+                />
+                <div class="project__technologies-icon">
+                  <img
+                    src=".//assets/body-images/whimsical.png"
+                    alt="Whimsical"
+                    class="project__technologies-icon"
+                  />
+                </div>
+
+                <img
+                  src=".//assets/body-images/pink-linkedin.svg"
+                  alt="Linkedin"
+                  class="project__technology-icon"
+                />
+              </div>
+              <div class="project__button">
+                <button class="btn project__button--btn">Study Case</button>
+              </div>
+            </div>
+            <div class="project__image">
+              <img
+                src="./assets/body-images/card-image-3.png"
+                alt="Tuku Ternak Screenshots"
+                class="project__image-content"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="tools">
+          <h2 class="tools__title">Applications and Tools</h2>
+          <div class="tools__container">
+            <div class="tool">
+              <div class="tool__image">
+                <img
+                  src=".//assets/body-images/figma.svg"
+                  alt="Figma"
+                  class="tool__image--icon"
+                />
+              </div>
+
+              <h3 class="tool__name">Figma</h3>
+              <p class="tool__description">
+                My primary design tool right now. Saya memilih menggunakan figma
+                karena dapat bekerja dengan Tim.
+              </p>
+            </div>
+            <div class="tools__divider"></div>
+            <div class="tool">
+              <div class="tool__image">
+                <img
+                  src=".//assets/body-images/whimsical.png"
+                  alt="whimsical"
+                  class="tool__image--icon"
+                />
+              </div>
+
+              <h3 class="tool__name">Whimsical</h3>
+              <p class="tool__description">
+                My primary design tool right now. Saya memilih menggunakan figma
+                karena dapat bekerja dengan Tim.
+              </p>
+            </div>
+            <div class="tools__divider"></div>
+            <div class="tool">
+              <div class="tool__image">
+                <img
+                  src=".//assets/body-images/pink-linkedin.svg"
+                  alt="Invision"
+                  class="tool__image--icon"
+                />
+              </div>
+
+              <h3 class="tool__name">Invision</h3>
+              <p class="tool__description">
+                My primary design tool right now. Saya memilih menggunakan figma
+                karena dapat bekerja dengan Tim.
+              </p>
+            </div>
+            <div class="tools__divider" id="tools__center-divider"></div>
+            <div class="tool">
+              <div class="tool__image">
+                <img
+                  src=".//assets/body-images/flutter.svg"
+                  alt="flutter"
+                  class="tool__image--icon"
+                />
+              </div>
+
+              <h3 class="tool__name">Flutter</h3>
+              <p class="tool__description">
+                My primary design tool right now. Saya memilih menggunakan figma
+                karena dapat bekerja dengan Tim.
+              </p>
+            </div>
+            <div class="tools__divider"></div>
+            <div class="tool">
+              <div class="tool__image">
+                <img
+                  src=".//assets/body-images/vs-code.svg"
+                  alt="vs-code"
+                  class="tool__image--icon"
+                />
+              </div>
+
+              <h3 class="tool__name">VS Code</h3>
+              <p class="tool__description">
+                My primary design tool right now. Saya memilih menggunakan figma
+                karena dapat bekerja dengan Tim.
+              </p>
+            </div>
+            <div class="tools__divider"></div>
+            <div class="tool tool--two">
+              <div class="tool__image tool__image--first">
+                <img
+                  src=".//assets/body-images/github.svg"
+                  alt="vs-code"
+                  class="tool__image--icon"
+                />
+              </div>
+              <div class="tool__image tool__image--last">
+                <img
+                  src=".//assets/body-images/gitlab.svg"
+                  alt="vs-code"
+                  class="tool__image--icon"
+                />
+              </div>
+
+              <h3 class="tool__name">Git</h3>
+              <p class="tool__description">
+                My primary design tool right now. Saya memilih menggunakan figma
+                karena dapat bekerja dengan Tim.
+              </p>
+            </div>
+          </div>
+
+          <button class="tools__load-more-button">
+            Load More Applications and Tools
+          </button>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__body">
+          <div class="footer__body__contact">
+            <h2 class="footer__body__contact__title">Let's get in touch</h2>
+            <p class="footer__body__contact__description">
+              For business inquiry please send email to
+              nanangprasetya.2000@gmail.com
+            </p>
+          </div>
+          <button class="btn footer__body__button">Say Hello</button>
+        </div>
+        <div class="footer__social-links">
+          <a href="#" class="footer__social-link"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a href="#" class="footer__social-link"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="footer__social-link"
+            ><i class="fab fa-dribbble"></i
+          ></a>
+          <a href="#" class="footer__social-link"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

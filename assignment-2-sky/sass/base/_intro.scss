@@ -1,0 +1,119 @@
+@import "theme";
+@import "components";
+@import "animations";
+.intro {
+  padding: 98px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--hero-section-background-color);
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 590px;
+  }
+
+  &__profile-picture {
+    width: 82px;
+    height: 82px;
+    animation: slideInLeftBounce 1s ease-out forwards;
+    &-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  &__name {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 146.687%;
+    letter-spacing: 0.08px;
+    margin-top: 16px;
+    color: var(--hero-section-text-color);
+    animation: slideInRightBounce 1s ease-out forwards;
+  }
+  &__title {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 142.687%;
+    letter-spacing: 0.96px;
+    margin-top: 24px;
+    color: var(--hero-section-text-color);
+    animation: slideInBottomBounce 1s ease-out forwards;
+  }
+  &__description {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 190.4%;
+    margin-top: 16px;
+    color: var(--hero-section-subtext-color);
+    animation: slideInBottomBounce 1s ease-out forwards;
+  }
+  &__link {
+    color: var(--hero-section-subtext-link-color);
+    cursor: pointer;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slideInBottomBounce 1s ease-out forwards;
+  }
+  &__button {
+    cursor: pointer;
+    &--say-hello {
+      @include primary-blue-button;
+      margin-top: 29px;
+      display: inline-block;
+    }
+    &--download-cv {
+      margin-top: 27px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: var(--hero-section-text-color);
+    }
+  }
+  &__social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 122px;
+    animation: slideInBottomBounce 1s ease-out forwards;
+
+    &--icon {
+      color: var(--hero-section-text-color);
+      cursor: pointer;
+      font-size: 22px;
+    }
+  }
+}
+
+@media screen and (min-width: 615px) {
+  .intro__social-links {
+    margin-top: 40px;
+    margin-bottom: 140px;
+  }
+}

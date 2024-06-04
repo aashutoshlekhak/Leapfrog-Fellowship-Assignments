@@ -1,0 +1,49 @@
+:root {
+  --primary-text-color: #000;
+  --card-background-color: #fff;
+  --menu-button-background-color: #f2f2f7;
+  --menu-button-color: #000;
+  --header-background-color: #fff;
+  --hero-section-background-color: #fff;
+  --hero-section-text-color: #000;
+  --hero-section-subtext-color: #2c2c2e;
+  --hero-section-subtext-link-color: #6572f9;
+  --projects-background-color: #f4f6fb;
+  --project-badge-background-color: #f2f2f7;
+  --project-card-background-color: #fff;
+  --project-card-title-color: #000;
+  --project-card-description-color: #2c2c2e;
+  --tool-image-background-color: #fff;
+  --tools-title-color: #000;
+  --tools-text-color: #2c2c2e;
+  --tools-divider-color: #dedede;
+  --tools-background-color: #fff;
+  --footer-background-color: #f4f6fb;
+  --footer-primary-text-color: #000;
+  --footer-secondary-text-color: #2c2c2e;
+}
+
+.dark-theme {
+  --primary-text-color: #fff;
+  --card-background-color: #050519;
+  --menu-button-background-color: #282c34;
+  --menu-button-color: #fff;
+  --header-background-color: #000;
+  --hero-section-background-color: #050519;
+  --hero-section-text-color: #fff;
+  --hero-section-subtext-color: rgba(255, 255, 255, 0.74);
+  --hero-section-subtext-link-color: rgba(255, 255, 255, 0.74);
+  --projects-background-color: #30303a;
+  --project-badge-background-color: #282c34;
+  --project-card-background-color: #050519;
+  --project-card-title-color: #fff;
+  --project-card-description-color: rgba(255, 255, 255, 0.74);
+  --tools-title-color: #fff;
+  --tools-text-color: #d9d9d9;
+  --tools-divider-color: #6f7279;
+  --tools-background-color: #050519;
+  --tool-image-background-color: #fff;
+  --footer-background-color: #282c34;
+  --footer-primary-text-color: #fff;
+  --footer-secondary-text-color: rgba(255, 255, 255, 0.74);
+}

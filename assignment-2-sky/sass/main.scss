@@ -1,0 +1,24 @@
+@import "base/theme";
+@import "base/components";
+@import "base/header";
+@import "base/intro";
+@import "base/project-card";
+@import "base/tools";
+@import "base/footer";
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  max-width: 1500px;
+}
