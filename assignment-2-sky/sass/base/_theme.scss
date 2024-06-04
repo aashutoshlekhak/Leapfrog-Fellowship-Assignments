@@ -18,6 +18,7 @@
   --tools-title-color: #000;
   --tools-text-color: #2c2c2e;
   --tools-divider-color: #dedede;
+  --tools-gradient: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
   --tools-background-color: #fff;
   --footer-background-color: #f4f6fb;
   --footer-primary-text-color: #000;
@@ -43,6 +44,12 @@
   --tools-title-color: #fff;
   --tools-text-color: #d9d9d9;
   --tools-divider-color: #6f7279;
+  --tools-gradient: linear-gradient(
+    to bottom,
+    rgba(5, 5, 33, 0),
+    rgba(5, 5, 29, 0.546875),
+    #050519
+  );
   --tools-background-color: #050519;
   --tool-image-background-color: #fff;
   --footer-background-color: #282c34;

@@ -42,6 +42,11 @@
     margin-top: 68px;
     background-color: var(--menu-button-background-color);
     color: var(--menu-button-color);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -49,6 +54,17 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  &--last-tool {
+    position: relative;
+    &::before {
+      content: "";
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      background-image: var(--tools-gradient);
+    }
+  }
 
   &__image {
     z-index: 1;
@@ -115,6 +131,7 @@
     width: 100%;
     align-items: center;
   }
+
   .tool__name {
     font-size: 24px;
   }
@@ -130,5 +147,10 @@
   #tools__center-divider {
     display: flex;
     width: 100%;
+  }
+  .tool--last-tool {
+    &::before {
+      display: none;
+    }
   }
 }
