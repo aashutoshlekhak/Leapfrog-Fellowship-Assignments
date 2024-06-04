@@ -15,10 +15,10 @@ body,
 body {
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 .container {
   width: 100vw;
   min-height: 100vh;
-  max-width: 1500px;
 }

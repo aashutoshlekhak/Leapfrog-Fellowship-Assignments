@@ -1,4 +1,5 @@
 :root {
+  --main-body-background: #d9d9d9;
   --primary-text-color: #000;
   --card-background-color: #fff;
   --menu-button-background-color: #f2f2f7;
@@ -24,6 +25,7 @@
 }
 
 .dark-theme {
+  --main-body-background: #050519;
   --primary-text-color: #fff;
   --card-background-color: #050519;
   --menu-button-background-color: #282c34;

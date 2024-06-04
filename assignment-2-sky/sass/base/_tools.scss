@@ -40,6 +40,8 @@
     line-height: 146.687%; /* 20.536px */
     letter-spacing: 0.07px;
     margin-top: 68px;
+    background-color: var(--menu-button-background-color);
+    color: var(--menu-button-color);
   }
 }
 
@@ -93,13 +95,14 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
   .tools__container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 90%;
+    max-width: 1140px;
   }
   .tool {
     width: 25%;
@@ -112,8 +115,17 @@
     width: 100%;
     align-items: center;
   }
+  .tool__name {
+    font-size: 24px;
+  }
+  .tool__description {
+    font-size: 16px;
+  }
   .tools__divider {
     display: none;
+  }
+  .tools__load-more-button {
+    max-width: 1140px;
   }
   #tools__center-divider {
     display: flex;

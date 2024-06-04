@@ -94,3 +94,14 @@
     }
   }
 }
+
+@media screen and (min-width: 1000px) {
+  .header {
+    padding: 24px 146px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .header {
+    padding: 24px calc((100vw - 1440px) / 2);
+  }
+}
