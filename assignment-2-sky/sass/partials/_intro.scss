@@ -1,6 +1,7 @@
 @import "theme";
-@import "components";
-@import "animations";
+@import "../components/buttons";
+@import "../animations/animations";
+
 .intro {
   padding: 98px 24px 24px 24px;
   display: flex;

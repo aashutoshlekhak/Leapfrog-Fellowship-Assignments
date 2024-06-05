@@ -1,10 +1,10 @@
-@import "base/theme";
-@import "base/components";
-@import "base/header";
-@import "base/intro";
-@import "base/project-card";
-@import "base/tools";
-@import "base/footer";
+@import "partials/theme";
+@import "components/buttons";
+@import "partials/header";
+@import "partials/intro";
+@import "partials/project-card";
+@import "partials/tools";
+@import "partials/footer";
 body,
 * {
   margin: 0;
