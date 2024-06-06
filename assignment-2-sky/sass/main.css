@@ -159,6 +159,11 @@
   align-items: center;
   background: var(--header-background-color);
 }
+.header__logo-wrapper {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
 .header__nav {
   display: none;
 }
@@ -172,6 +177,16 @@
 .header__logo-image {
   width: 100%;
   height: 100%;
+}
+.header__logo-text {
+  color: var(--primary-text-color);
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 1px;
+  display: none;
 }
 .header__right {
   display: flex;
@@ -228,6 +243,9 @@
 @media screen and (min-width: 1000px) {
   .header {
     padding: 24px 146px;
+  }
+  .header__logo-text {
+    display: flex;
   }
 }
 @media screen and (min-width: 1500px) {

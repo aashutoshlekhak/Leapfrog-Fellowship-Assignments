@@ -19,6 +19,11 @@
   justify-content: space-between;
   align-items: center;
   background: var(--header-background-color);
+  &__logo-wrapper {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
   &__nav {
     display: none;
 
@@ -34,6 +39,16 @@
     &-image {
       width: 100%;
       height: 100%;
+    }
+    &-text {
+      color: var(--primary-text-color);
+      font-family: Montserrat;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 36px;
+      letter-spacing: 1px;
+      display: none;
     }
   }
   &__right {
@@ -98,6 +113,11 @@
 @media screen and (min-width: 1000px) {
   .header {
     padding: 24px 146px;
+    &__logo {
+      &-text {
+        display: flex;
+      }
+    }
   }
 }
 @media screen and (min-width: 1500px) {
