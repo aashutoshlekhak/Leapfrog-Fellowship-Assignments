@@ -1,7 +1,9 @@
 // bounding box
 const box = document.getElementById("box");
-const width = 800;
-const height = 600;
+const width = window.innerWidth;
+const height = window.innerHeight;
+// const width = 500;
+// const height = 700;
 box.style.backgroundColor = "#060017";
 box.style.border = "solid 0.1px #00FFD4";
 box.style.width = `${width}px`;
@@ -9,7 +11,7 @@ box.style.height = `${height}px`;
 box.style.position = "relative";
 
 // ball constants
-const numberOfBalls = 500;
+const numberOfBalls = 100;
 const minRadius = 3;
 const maxRadius = 12;
 const minSpeed = 1;
@@ -48,6 +50,18 @@ class Ball {
     }
     if (this.y + this.dy < 0 || this.y + this.radius * 2 + this.dy > height) {
       this.dy = -this.dy;
+    }
+    if (this.y <= 0) {
+      this.y = 0;
+    }
+    if (this.x <= 0) {
+      this.x = 0;
+    }
+    if (this.y >= height) {
+      this.y = height - 2 * this.radius;
+    }
+    if (this.x >= width) {
+      this.x = width - 2 * this.radius;
     }
 
     // for normal motion
@@ -129,6 +143,17 @@ function handleBallCollision(ball1, ball2) {
   ball2.dy = tempDy;
 }
 
+function clearFixOverlap(ball1, ball2) {
+  let dx = ball1.x - ball2.x;
+  let dy = ball1.y - ball2.y;
+  let distance = Math.sqrt(dx * dx + dy * dy);
+  let overlap = ball1.radius + ball2.radius - distance;
+  ball1.x += overlap;
+  ball2.x -= overlap;
+  ball1.y += overlap;
+  ball2.y -= overlap;
+}
+
 // Collision detection
 function moveBalls() {
   // moving each ball to check collision
@@ -137,6 +162,7 @@ function moveBalls() {
     for (let j = i + 1; j < balls.length; j++) {
       if (ballOverlap(balls[i], balls[j])) {
         handleBallCollision(balls[i], balls[j]);
+        clearFixOverlap(balls[i], balls[j]);
       }
     }
   }
