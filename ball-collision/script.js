@@ -2,20 +2,20 @@
 const box = document.getElementById("box");
 const width = window.innerWidth;
 const height = window.innerHeight;
-// const width = 500;
-// const height = 700;
-box.style.backgroundColor = "#060017";
+// const width = 1000;
+// const height = 800;
+// box.style.backgroundColor = "#060017";
 box.style.border = "solid 0.1px #00FFD4";
 box.style.width = `${width}px`;
 box.style.height = `${height}px`;
 box.style.position = "relative";
 
 // ball constants
-const numberOfBalls = 100;
-const minRadius = 3;
-const maxRadius = 12;
+const numberOfBalls = 300;
+const minRadius = 4;
+const maxRadius = 10;
 const minSpeed = 1;
-const maxSpeed = 5;
+const maxSpeed = 3;
 const balls = [];
 
 // Ball class
@@ -51,17 +51,17 @@ class Ball {
     if (this.y + this.dy < 0 || this.y + this.radius * 2 + this.dy > height) {
       this.dy = -this.dy;
     }
-    if (this.y <= 0) {
-      this.y = 0;
+    if (this.y < 0) {
+      this.y = 1;
     }
-    if (this.x <= 0) {
-      this.x = 0;
+    if (this.x < 0) {
+      this.x = 1;
     }
-    if (this.y >= height) {
-      this.y = height - 2 * this.radius;
+    if (this.y + this.radius * 2 > height) {
+      this.y = height - this.radius * 2 - 2;
     }
-    if (this.x >= width) {
-      this.x = width - 2 * this.radius;
+    if (this.x + this.radius * 2 >= width) {
+      this.x = width - 2 * this.radius - 2;
     }
 
     // for normal motion
