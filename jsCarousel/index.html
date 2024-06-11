@@ -17,7 +17,15 @@
   <body>
     <div id="app">
       <h1 class="Heading">Simple Image Carousel</h1>
-
+      <div class="dropdown-container">
+        <label for="transition-duration">Transition Delay:</label>
+        <select id="transition-duration">
+          <option value="1000">1s</option>
+          <option value="2000">2s</option>
+          <option value="5000">5s</option>
+          <option value="10000">10s</option>
+        </select>
+      </div>
       <div class="carousel-container">
         <div class="carousel-image-wrapper">
           <img src="public/images/1.1.jpg" alt="mountain" />
@@ -38,6 +46,18 @@
         <span class="nav-button" id="next-button"
           ><i class="fa-solid fa-greater-than"></i
         ></span>
+      </div>
+      <div class="slider-container">
+        <label for="animation-duration">Animation Duration:</label>
+        <input
+          type="range"
+          id="animation-duration"
+          min="500"
+          max="1000"
+          step="100"
+          value="100"
+        />
+        <span id="animation-duration-value">.5s</span>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>

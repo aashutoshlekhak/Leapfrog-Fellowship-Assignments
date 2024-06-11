@@ -8,13 +8,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const dots = document.querySelectorAll<HTMLSpanElement>(".dot");
   const prevButton = document.getElementById("prev-button");
   const nextButton = document.getElementById("next-button");
+  const durationSlider = document.getElementById(
+    "animation-duration"
+  ) as HTMLInputElement;
+  const durationValue = document.getElementById("animation-duration-value");
   let currentIndex = 0;
   let intervalId: number;
+  let transitionTime = 2000; // default carousel transition time
+  let animationDuration = parseInt(durationSlider.value);
 
   function startCarousel() {
     intervalId = setInterval(() => {
       moveCarousel();
-    }, 2500);
+    }, transitionTime);
   }
 
   function moveCarousel() {
@@ -25,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateCarousel() {
     if (carouselTrack) {
       const offset = -currentIndex * imageWidth;
+      carouselTrack.style.transition = `left ${animationDuration}ms ease`;
       carouselTrack.style.left = `${offset}px`;
       updateDots();
     }
@@ -66,6 +73,13 @@ document.addEventListener("DOMContentLoaded", function () {
       startCarousel();
     });
   }
+
+  durationSlider.addEventListener("input", () => {
+    animationDuration = parseInt(durationSlider.value);
+    if (durationValue) {
+      durationValue.textContent = `${animationDuration / 1000}s`;
+    }
+  });
 
   startCarousel();
 });
