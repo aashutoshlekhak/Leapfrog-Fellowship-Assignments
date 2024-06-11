@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  width: 500px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: rgba(121, 121, 121, 0.48) 0px 22px 70px 4px;
+}
+
+img {
+  width: 100%;
+}
+
+.carousel-image-wrapper {
+  display: flex;
+  width: calc(4 * 500px);
+  position: relative;
+  left: 0;
+  transition: left 0.6s ease;
+}
+
+.carousel-image-wrapper img {
+  width: 500px;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.nav-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.dot.active {
+  background-color: #a71aff;
+}
+.nav-button {
+  color: rgb(106, 0, 255);
+  cursor: pointer;
+}

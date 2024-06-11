@@ -13,7 +13,7 @@ box.style.position = "relative";
 // ball constants
 const numberOfBalls = 300;
 const minRadius = 4;
-const maxRadius = 10;
+const maxRadius = 12;
 const minSpeed = 1;
 const maxSpeed = 3;
 const balls = [];
