@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: #ffffff;
+  background-image: radial-gradient(#5a5a5a 0.5px, #ffffff 0.5px);
+  background-size: 14px 14px;
+}
 
 #app {
   width: 100vw;
