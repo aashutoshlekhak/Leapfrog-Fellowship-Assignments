@@ -27,21 +27,21 @@ const lanes = [CAR_POSITION.LEFT, CAR_POSITION.CENTER, CAR_POSITION.RIGHT];
 
 const enemyCar1 = new Car(
   lanes[0],
-  getRandomInt(-500, -200),
+  getRandomInt(-1000, -0),
   carImages[getRandomInt(0, carImages.length)],
   CAR_DIMENSIONS.CAR_WIDTH,
   CAR_DIMENSIONS.CAR_HEIGHT
 );
 const enemyCar2 = new Car(
   lanes[1],
-  getRandomInt(-400, -100),
+  getRandomInt(-1000, 0),
   carImages[getRandomInt(0, carImages.length)],
   CAR_DIMENSIONS.CAR_WIDTH,
   CAR_DIMENSIONS.CAR_HEIGHT
 );
 const enemyCar3 = new Car(
   lanes[2],
-  getRandomInt(-300, -0),
+  getRandomInt(-1000, 0),
   carImages[getRandomInt(0, carImages.length)],
   CAR_DIMENSIONS.CAR_WIDTH,
   CAR_DIMENSIONS.CAR_HEIGHT

@@ -8,5 +8,7 @@ export function collisionDetected(
   playerPosition: number,
   enemyPosition: number
 ) {
-  return playerPosition - enemyPosition < CAR_DIMENSIONS.CAR_HEIGHT - 20;
+  return (
+    Math.abs(playerPosition - enemyPosition) < CAR_DIMENSIONS.CAR_HEIGHT - 20
+  );
 }
