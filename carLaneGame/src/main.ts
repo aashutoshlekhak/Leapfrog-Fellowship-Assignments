@@ -47,6 +47,7 @@ const enemyCar3 = new Car(
   CAR_DIMENSIONS.CAR_HEIGHT
 );
 
+//@ts-ignore
 const enemyCar4 = new Car(
   lanes[getRandomInt(0, lanes.length)],
   getRandomInt(-1000, -500),
