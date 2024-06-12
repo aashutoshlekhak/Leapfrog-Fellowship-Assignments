@@ -1,6 +1,6 @@
 export const DIMENSIONS = {
   CANVAS_WIDTH: 450,
-  CANVAS_HEIGHT: 800,
+  CANVAS_HEIGHT: 770,
 };
 
 export const CAR_DIMENSIONS = {
@@ -10,7 +10,7 @@ export const CAR_DIMENSIONS = {
 
 export const LINE = {
   WIDTH: 10,
-  HEIGHT: 60
+  HEIGHT: 60,
 };
 export const CAR_POSITION = {
   CENTER: (DIMENSIONS.CANVAS_WIDTH - CAR_DIMENSIONS.CAR_WIDTH - LINE.WIDTH) / 2,
@@ -25,7 +25,7 @@ export const BOUNDARY_LINE = {
   HEIGHT: 20,
 };
 
-export const GAME_SPEED=5;
-export const GAME_SPEED_INCREMENT_FACTOR=1.02
+export const GAME_SPEED = 5;
+export const GAME_SPEED_INCREMENT_FACTOR = 1.02;
 
 export const MIN_DISTANCE_BETWEEN_CARS = 1;
