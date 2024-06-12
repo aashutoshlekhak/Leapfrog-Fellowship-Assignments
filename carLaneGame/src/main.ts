@@ -121,6 +121,10 @@ function draw() {
     console.log(playerCar.x);
     if (collisionDetected(playerCar.y, car.y) && playerCar.x === car.x) {
       gameSpeed = 0;
+      const highScore = Number(localStorage.getItem("highScore")) || 0;
+      if (score > highScore) {
+        localStorage.setItem("highScore", String(score));
+      }
       window.location.href = `./gameOver.html?score=${score}`;
     }
     if (car.y > DIMENSIONS.CANVAS_HEIGHT) {

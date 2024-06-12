@@ -12,6 +12,8 @@
       <h1>Game Over</h1>
       <p>Your Score:</p>
       <p class="score" id="score"></p>
+      <p>High Score:</p>
+      <p class="high-score" id="high-score"></p>
       <a href="./gameScreen.html" class="btn-restart">Restart Game</a>
     </div>
     <script type="module">
@@ -29,8 +31,16 @@
 
       const params = getQueryParams();
       const scoreElement = document.getElementById("score");
+      const highScoreElement = document.getElementById("high-score");
+
       if (scoreElement && params.score) {
         scoreElement.textContent = params.score;
+      }
+
+      // Retrieve and display the high score
+      const highScore = Number(localStorage.getItem("highScore")) || 0;
+      if (highScoreElement) {
+        highScoreElement.textContent = highScore;
       }
     </script>
   </body>
