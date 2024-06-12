@@ -133,6 +133,7 @@ function draw() {
       if (score > highScore) {
         localStorage.setItem("highScore", String(score));
       }
+      alert("Please wait to restart the game");
       window.location.href = `./gameOver.html?score=${score}`;
     }
     if (car.y > DIMENSIONS.CANVAS_HEIGHT) {
