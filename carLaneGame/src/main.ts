@@ -80,6 +80,8 @@ const lines = [
 
 let score = 0;
 
+let gameOver = false;
+
 function updateScore() {
   enemyCars.forEach((car) => {
     if (car.y >= playerCar.y + playerCar.height) {
@@ -133,7 +135,7 @@ function draw() {
       if (score > highScore) {
         localStorage.setItem("highScore", String(score));
       }
-      alert("Please wait to restart the game");
+      gameOver = true;
       window.location.href = `./gameOver.html?score=${score}`;
     }
     if (car.y > DIMENSIONS.CANVAS_HEIGHT) {
@@ -141,7 +143,8 @@ function draw() {
       car.img.src = carImages[getRandomInt(0, carImages.length)];
     }
   });
-
+  //to show alert
+  if (gameOver) alert("Game Over: Please Click to Restart");
   // Draw road lines
   ctx.fillStyle = "white";
   for (let line of lines) {
