@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="start-screen">
+        <h1>Welcome to the Game</h1>
+        <p>Click Start to begin</p>
+        <a
+          href="/src/gamePages/gameScreen.html"
+          class="btn-start"
+          id="start-button"
+          >Start Game</a
+        >
+        <div class="instructions">
+          <p>Instructions:</p>
+          <ul>
+            <li>Click on Start to start the game.</li>
+            <li>Use 'A' or &larr; to move left.</li>
+            <li>Use 'D' or &rarr; to move right.</li>
+            <li>Press Enter to restart the game once it is over.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
