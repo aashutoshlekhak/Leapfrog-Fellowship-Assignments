@@ -122,6 +122,7 @@ function draw() {
     if (collisionDetected(playerCar.y, car.y) && playerCar.x === car.x) {
       console.log("collision detected");
       window.location.href = `./gameOver.html?score=${score}`;
+      console.log("new page");
     }
     if (car.y > DIMENSIONS.CANVAS_HEIGHT) {
       car.y = getRandomInt(-500, 0);
