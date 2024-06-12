@@ -26,5 +26,6 @@ export const BOUNDARY_LINE = {
 };
 
 export const GAME_SPEED=5;
+export const GAME_SPEED_INCREMENT_FACTOR=1.02
 
 export const MIN_DISTANCE_BETWEEN_CARS = 1;

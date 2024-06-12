@@ -4,6 +4,7 @@ import {
   CAR_POSITION,
   DIMENSIONS,
   GAME_SPEED,
+  GAME_SPEED_INCREMENT_FACTOR,
   LINE,
 } from "./constants";
 import carBlue from "../public/carBlue.png";
@@ -21,7 +22,7 @@ canvas.height = DIMENSIONS.CANVAS_HEIGHT;
 
 // Car images array
 const carImages = [carRed, carBlue, carGrey, carWhite, carYellow];
-
+let gameSpeed = GAME_SPEED;
 // Lane positions
 const lanes = [CAR_POSITION.LEFT, CAR_POSITION.CENTER, CAR_POSITION.RIGHT];
 
@@ -34,14 +35,14 @@ const enemyCar1 = new Car(
 );
 const enemyCar2 = new Car(
   lanes[1],
-  getRandomInt(-1000, 0),
+  getRandomInt(-1200, 0),
   carImages[getRandomInt(0, carImages.length)],
   CAR_DIMENSIONS.CAR_WIDTH,
   CAR_DIMENSIONS.CAR_HEIGHT
 );
 const enemyCar3 = new Car(
   lanes[2],
-  getRandomInt(-1000, 0),
+  getRandomInt(-1200, 0),
   carImages[getRandomInt(0, carImages.length)],
   CAR_DIMENSIONS.CAR_WIDTH,
   CAR_DIMENSIONS.CAR_HEIGHT
@@ -50,7 +51,7 @@ const enemyCar3 = new Car(
 //@ts-ignore
 const enemyCar4 = new Car(
   lanes[getRandomInt(0, lanes.length)],
-  getRandomInt(-1000, -500),
+  getRandomInt(-1200, -500),
   carImages[getRandomInt(0, carImages.length)],
   CAR_DIMENSIONS.CAR_WIDTH,
   CAR_DIMENSIONS.CAR_HEIGHT
@@ -60,7 +61,7 @@ const enemyCars = [enemyCar1, enemyCar2, enemyCar3];
 
 const playerCar = new Car(
   CAR_POSITION.CENTER,
-  600,
+  650,
   carRed,
   CAR_DIMENSIONS.CAR_WIDTH,
   CAR_DIMENSIONS.CAR_HEIGHT
@@ -80,7 +81,14 @@ const lines = [
 let score = 0;
 
 function updateScore() {
-  score++;
+  enemyCars.forEach((car) => {
+    if (car.y >= playerCar.y + playerCar.height) {
+      score++;
+      gameSpeed *= GAME_SPEED_INCREMENT_FACTOR;
+      //to move car outside of screent and prevent multiple scorre increments.
+      car.y = getRandomInt(-500, 0);
+    }
+  });
 }
 
 function drawScore() {
@@ -109,14 +117,14 @@ function draw() {
     if (car.img.complete) {
       ctx.drawImage(car.img, car.x, car.y, car.width, car.height);
     }
-    car.y += GAME_SPEED;
+    car.y += gameSpeed;
     console.log(playerCar.x);
     if (collisionDetected(playerCar.y, car.y) && playerCar.x === car.x) {
       console.log("collision detected");
       window.location.href = `./gameOver.html?score=${score}`;
     }
     if (car.y > DIMENSIONS.CANVAS_HEIGHT) {
-      car.y = getRandomInt(-200, 0);
+      car.y = getRandomInt(-500, 0);
       car.img.src = carImages[getRandomInt(0, carImages.length)];
     }
   });
@@ -125,7 +133,7 @@ function draw() {
   ctx.fillStyle = "white";
   for (let line of lines) {
     ctx.fillRect(line.x, line.y, LINE.WIDTH, LINE.HEIGHT);
-    line.y += GAME_SPEED;
+    line.y += gameSpeed;
     if (line.y >= DIMENSIONS.CANVAS_HEIGHT) {
       line.y = -LINE.HEIGHT + 35;
     }
@@ -144,9 +152,14 @@ document.addEventListener("keydown", (event) => {
   const key = event.key.toLocaleLowerCase();
   console.log(key);
   if (key === "a" || key === "arrowleft") {
-    playerCar.x -= CAR_POSITION.RELOCATE;
+    if (playerCar.x > CAR_POSITION.LEFT) {
+      playerCar.x -= CAR_POSITION.RELOCATE;
+    }
   }
+
   if (key === "d" || key === "arrowright") {
-    playerCar.x += CAR_POSITION.RELOCATE;
+    if (playerCar.x < CAR_POSITION.RIGHT) {
+      playerCar.x += CAR_POSITION.RELOCATE;
+    }
   }
 });
