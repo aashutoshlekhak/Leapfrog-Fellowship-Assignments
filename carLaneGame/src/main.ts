@@ -91,10 +91,18 @@ function updateScore() {
   });
 }
 
-function drawScore() {
-  ctx.fillStyle = "white";
-  ctx.font = "24px Arial";
-  ctx.fillText("Score: " + score, 10, 30);
+function drawScores() {
+  const currentScoreElement = document.getElementById("current-score");
+  const highScoreElement = document.getElementById("high-score");
+
+  if (currentScoreElement) {
+    currentScoreElement.textContent = score.toString();
+  }
+
+  const highScore = Number(localStorage.getItem("highScore")) || 0;
+  if (highScoreElement) {
+    highScoreElement.textContent = highScore.toString();
+  }
 }
 
 function draw() {
@@ -145,7 +153,7 @@ function draw() {
 
   // Update and draw the score
   updateScore();
-  drawScore();
+  drawScores();
 
   requestAnimationFrame(draw);
 }
