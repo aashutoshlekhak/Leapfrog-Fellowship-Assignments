@@ -132,7 +132,7 @@ function update() {
       platform.height
     );
     if (detectCollision(player, platform) && velocityY > 0) {
-      let pop = new Audio("../public/sounds/pop.mp3");
+      let pop = new Audio("/sounds/pop.mp3");
       pop.play();
       velocityY = initialVelocityY;
     }
@@ -157,7 +157,7 @@ function update() {
 
   // Show game over message
   if (gameOver) {
-    let gameOverSound = new Audio("../public/sounds/gameOver.mp3");
+    let gameOverSound = new Audio("/sounds/gameOver.mp3");
     gameOverSound.play();
     context.fillText(
       "Game Over: Press 'R' to Restart",
