@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doodle Jump</title>
+  </head>
+  <body>
+    <div id="start-screen" class="screen content">
+      <h1 class="game-title">Doodle Jump</h1>
+      <p class="instructions">
+        Press <strong>A</strong> or left arrow <strong>&lt;</strong> to move
+        left.<br />
+        Press <strong>D</strong> or right arrow <strong>&gt;</strong> to move
+        right.<br />
+        The game is over when the player falls off the game screen.<br />
+        Press <strong>R</strong> to restart the game.
+      </p>
+      <button id="start-button" class="game-button">Start Game</button>
+    </div>
+    <div id="game-screen" class="screen hidden content">
+      <canvas id="canvas" class="hidden content"></canvas>
+    </div>
+    <div id="game-over-screen" class="screen hidden content">
+      <h1>Game Over</h1>
+      <p id="final-score"></p>
+      <button id="restart-button" class="game-button content">
+        Restart Game
+      </button>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
