@@ -77,10 +77,15 @@ function startGame() {
 // Game loop update function
 function update() {
   requestAnimationFrame(update);
+  let highScore = parseInt(localStorage.getItem("highScore") || "0");
   if (gameOver) {
     const finalScore = document.getElementById("final-score")!;
+    const gameOverScreenHighScore = document.getElementById(
+      "high-score-game-over"
+    )!;
 
     finalScore.textContent = `Your score is: ${score}`;
+    gameOverScreenHighScore.textContent = `High Score: ${highScore}`;
     document.getElementById("game-screen")!.classList.add("hidden");
     document.getElementById("game-over-screen")!.classList.remove("hidden");
     return;
@@ -90,6 +95,8 @@ function update() {
   const context = board.getContext("2d")!;
   const gameScoreSpan = document.getElementById("game-score")!;
   gameScoreSpan.textContent = score.toString();
+  const gameHighScoreSpan = document.getElementById("game-high-score")!;
+  gameHighScoreSpan.textContent = highScore.toString();
 
   context.clearRect(0, 0, board.width, board.height);
   player.x += velocityX;
@@ -106,11 +113,11 @@ function update() {
   }
 
   // Move player and platforms
-  if (player.y < CANVAS_DIMENSIONS.HEIGHT / 2) {
+  if (player.y < CANVAS_DIMENSIONS.HEIGHT / 4) {
     platformArray.forEach((platform) => {
       platform.y += -velocityY;
     });
-    player.y = CANVAS_DIMENSIONS.HEIGHT / 2;
+    player.y = CANVAS_DIMENSIONS.HEIGHT / 4;
   }
 
   // Check for game over
@@ -145,6 +152,9 @@ function update() {
   ) {
     platformArray.shift();
     score++;
+    if (score > highScore) {
+      highScore = score;
+    }
     newPlatform();
   }
 
@@ -158,6 +168,11 @@ function update() {
   // Show game over message
   if (gameOver) {
     let gameOverSound = new Audio("/sounds/gameOver.mp3");
+    if (score > highScore) {
+      highScore = score;
+      localStorage.setItem("highScore", highScore.toString());
+    }
+    console.log(highScore);
     gameOverSound.play();
     context.fillText(
       "Game Over: Press 'R' to Restart",

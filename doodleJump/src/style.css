@@ -54,8 +54,8 @@ body::before {
 #canvas {
   background-color: #f3eee8;
   border-radius: 3px;
-  border: solid 0.5px #a97e3e;
-  background-image: url("../public/images/doodleBG.png");
+  border: solid 3px #ffeb3b;
+  background-image: url("/images/doodleBG.png") !important;
   object-fit: cover;
 }
 
@@ -223,6 +223,22 @@ body::before {
   animation: buttonHover 0.6s infinite;
 }
 
-#score-div {
-  background-color: white;
+/* Game Screen */
+.score-board {
+  background-color: #1e3a8a;
+  border: solid 3px #ffeb3b;
+  padding: 20px;
+  width: 366px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.game-score {
+  font-size: 1.5em;
+}
+
+.score-number {
+  color: #ffeb3b;
 }
