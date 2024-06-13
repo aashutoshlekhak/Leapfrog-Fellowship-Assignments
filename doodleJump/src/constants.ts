@@ -15,5 +15,5 @@ export const PLATFORM = {
 };
 
 // game physics
-export let GRAVITY = 0.3;
+export let GRAVITY = 0.2;
 export let FRICTION = 0.95;

@@ -34,6 +34,8 @@ window.onload = function () {
   const gameOverScreen = document.getElementById("game-over-screen")!;
   const gameScreen = document.getElementById("game-screen")!;
   const canvasBoard = document.getElementById("canvas");
+  const gameScoreSpan = document.getElementById("game-score")!;
+  gameScoreSpan.textContent = score.toString();
 
   // Add event listeners to the buttons
   startButton.addEventListener("click", () => {
@@ -77,6 +79,7 @@ function update() {
   requestAnimationFrame(update);
   if (gameOver) {
     const finalScore = document.getElementById("final-score")!;
+
     finalScore.textContent = `Your score is: ${score}`;
     document.getElementById("game-screen")!.classList.add("hidden");
     document.getElementById("game-over-screen")!.classList.remove("hidden");
@@ -85,6 +88,8 @@ function update() {
 
   const board = document.querySelector<HTMLCanvasElement>("canvas")!;
   const context = board.getContext("2d")!;
+  const gameScoreSpan = document.getElementById("game-score")!;
+  gameScoreSpan.textContent = score.toString();
 
   context.clearRect(0, 0, board.width, board.height);
   player.x += velocityX;
@@ -127,6 +132,8 @@ function update() {
       platform.height
     );
     if (detectCollision(player, platform) && velocityY > 0) {
+      let pop = new Audio("../public/sounds/pop.mp3");
+      pop.play();
       velocityY = initialVelocityY;
     }
   }
@@ -141,6 +148,8 @@ function update() {
     newPlatform();
   }
 
+  // update score of the title
+
   // Draw score
   context.fillStyle = "black";
   context.font = "16px sans-serif";
@@ -148,6 +157,8 @@ function update() {
 
   // Show game over message
   if (gameOver) {
+    let gameOverSound = new Audio("../public/sounds/gameOver.mp3");
+    gameOverSound.play();
     context.fillText(
       "Game Over: Press 'R' to Restart",
       CANVAS_DIMENSIONS.WIDTH / 7,
