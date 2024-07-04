@@ -82,12 +82,7 @@ right join courses c on e.course_id=c.course_id;
 select distinct s1.student_name, s2.student_name
 	from (enrollments e1 inner join students s1 on e1.student_id=s1.student_id) 
 	inner join (enrollments e2 inner join students s2 on e2.student_id=s2.student_id)
-	on e2.course_id = e1.course_id and s1.student_id < s2.student_id
-
-
-
-
-
+	on e2.course_id = e1.course_id and e1.student_id < e2.student_id;
 
 
 -- 5. Complex Join:
