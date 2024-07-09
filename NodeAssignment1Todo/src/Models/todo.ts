@@ -21,6 +21,8 @@ let todos = [
   },
 ];
 
+let count = todos.length;
+
 export const getTodos = () => todos;
 
 export const getTodoById = (id: string) => {
@@ -28,8 +30,9 @@ export const getTodoById = (id: string) => {
 };
 
 export const addTodo = (todo: Todo) => {
+  count++;
   const newTodo = {
-    id: `${todos.length + 1}`,
+    id: `${count}`,
     ...todo,
   };
   todos.push(newTodo);

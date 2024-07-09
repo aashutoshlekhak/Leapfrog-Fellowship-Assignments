@@ -4,12 +4,18 @@ import { create } from "domain";
 
 export const getTodos = (req: Request, res: Response) => {
   const data = todoService.getTodos();
+  if (!data){
+    res.send("No data found");
+  }
   res.send(data);
 };
 
 export const getTodoById = (req: Request, res: Response) => {
   const { id } = req.params;
   const data = todoService.getTodoById(id);
+  if (!data){
+    res.send("No data found");
+  }
   res.send(data);
 };
 
