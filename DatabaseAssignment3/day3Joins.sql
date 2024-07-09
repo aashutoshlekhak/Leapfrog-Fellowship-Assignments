@@ -75,7 +75,7 @@ students s
 right join enrollments e on s.student_id = e.student_id
 right join courses c on e.course_id=c.course_id;
 
-    
+
 -- 4. Self Join:
 -- Question: Find pairs of students who are enrolled in at least one common course.
 
@@ -87,6 +87,14 @@ select distinct s1.student_name, s2.student_name
 
 -- 5. Complex Join:
 -- Question: Retrieve students who are enrolled in 'Introduction to CS' but not in 'Data Structures'.
+select s.student_name, c.course_name from 
+	students s inner join enrollments e on s.student_id = e.student_id 
+	inner join courses c on e.course_id=c.course_id and c.course_name ='Introduction to CS'
+	where s.student_id not in (
+		select student_id from enrollments inner join courses on enrollments.course_id = courses.course_id 
+		where courses.course_name = 'Data Structures'
+)
+
 select students.student_name
 from students
 inner join enrollments e1 on students.student_id = e1.student_id
