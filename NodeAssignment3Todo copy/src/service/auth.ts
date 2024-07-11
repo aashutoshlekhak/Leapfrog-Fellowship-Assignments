@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import { User } from "../interfaces/user";
-import { getUserByEmail } from "../Models/user";
+import { getUserByEmail } from "../model/user";
 import { sign, verify } from "jsonwebtoken";
 import config from "../config";
 import {
@@ -30,6 +30,7 @@ export async function login(body: Pick<User, "email" | "password">) {
     id: existingUser.id,
     name: existingUser.name,
     email: existingUser.email,
+    permission: existingUser.permission,
   };
 
   //   const accessToken = await sign(payload, config.jwt.secret!, {

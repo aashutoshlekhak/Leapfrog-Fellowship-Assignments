@@ -31,28 +31,25 @@
 
 # API routes/paths
 
-### To create user 
-- http://localhost:3000/user (POST request)
--creates user: email, password of type string 
+### To see all todos 
+- http://localhost:3000/todos (GET request)
 
-### To login
-- http://localhost:3000/auth/login (POST request)
--it returns access token and refresn token. 
--copy that token 
+### To see todo by id
+- http://localhost:3000/todos/id (GET request)
 
-### To perform CRUD in todos
--send the access token as bearer token in the header
-- http://localhost:3000/todos/ (POST Create request) 
--http://localhost:3000/todos/id (PUT Update Request)
-http://localhost:3000/todos/ (GET Read request) 
+### To delete todo by id
 - http://localhost:3000/todos/id (DELETE request)
 
+### To mark todo as done
+- http://localhost:3000/todos/finish/id (PUT request)
+
+### To add todo
+- http://localhost:3000/todos (POST request)
 
 ```sh
     {
         "title" : "title name",
         "description" : "description text"
-        "created at": "date field"
     }
 ```
 
