@@ -1,4 +1,4 @@
-import { Response } from "express";
+import { NextFunction, Response } from "express";
 import { Request } from "../interfaces/auth";
 import * as todoService from "../service/todo";
 import { create } from "domain";
@@ -7,14 +7,14 @@ import HttpStatusCodes from "http-status-codes";
 
 const logger = loggerWithNameSpace("TodoController");
 
-export const getTodos = (req: Request, res: Response) => {
+export const getTodos = (req: Request, res: Response, next: NextFunction) => {
   const userId = req.user!.id;
-  console.log(`userid: ${req.user?.id}`);
-  const data = todoService.getTodos(userId);
-  if (!data) {
-    res.send("No data found");
+  try {
+    const data = todoService.getTodos(userId);
+    res.send(data);
+  } catch (e) {
+    next(e);
   }
-  res.send(data);
 };
 
 export const getTodoById = (req: Request, res: Response) => {

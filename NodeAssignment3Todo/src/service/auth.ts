@@ -7,12 +7,14 @@ import {
   generateAccessToken,
   generateRefreshToken,
 } from "../utils/generateTokens";
+import { UnauthenticatedError } from "../error/Errors";
+import loggerWithNameSpace from "../utils/logger";
+
+const logger = loggerWithNameSpace("Auth");
 export async function login(body: Pick<User, "email" | "password">) {
   const existingUser = getUserByEmail(body.email);
   if (!existingUser) {
-    return {
-      error: "Invalid email or password",
-    };
+    throw new UnauthenticatedError("Invalid email or password");
   }
 
   const isValidPassword = await bcrypt.compare(
@@ -21,9 +23,8 @@ export async function login(body: Pick<User, "email" | "password">) {
   );
 
   if (!isValidPassword) {
-    return {
-      error: "Invalid email or password",
-    };
+
+    throw new UnauthenticatedError("Invalid email or password");
   }
 
   const payload = {
@@ -33,15 +34,7 @@ export async function login(body: Pick<User, "email" | "password">) {
     permission: existingUser.permission,
   };
 
-  //   const accessToken = await sign(payload, config.jwt.secret!, {
-  //     expiresIn: config.jwt.accessTokenExpiryMS,
-  //   });
-
   const accessToken = await generateAccessToken(payload);
-
-  //   const refreshToken = await sign(payload, config.jwt.secret!, {
-  //     expiresIn: config.jwt.refreshTokenExpiryMS,
-  //   });
 
   const refreshToken = await generateRefreshToken(payload);
 

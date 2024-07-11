@@ -41,10 +41,11 @@
 -copy that token 
 
 ### To perform CRUD in todos
--send the access token as bearer token in the header
+- send the access token as bearer token in the header
+
 - http://localhost:3000/todos/ (POST Create request) 
--http://localhost:3000/todos/id (PUT Update Request)
-http://localhost:3000/todos/ (GET Read request) 
+- http://localhost:3000/todos/id (PUT Update Request)
+- http://localhost:3000/todos/ (GET Read request) 
 - http://localhost:3000/todos/id (DELETE request)
 
 

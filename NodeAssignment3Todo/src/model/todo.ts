@@ -1,3 +1,4 @@
+import { NotFoundError } from "../error/Errors";
 import { Todo } from "../interfaces/todo";
 
 let todos: Todo[] = [
@@ -26,11 +27,17 @@ let todos: Todo[] = [
 
 let count = todos.length;
 
-export const getTodos = (userId: string) =>
-  todos.filter((todo) => todo.userId === userId);
+export const getTodos = (userId: string) => {
+  const todos1 = todos.filter((todo) => todo.userId === userId);
+  return todos1;
+};
 
 export const getTodoById = (id: string, userId: string) => {
-  return todos.find((todo) => todo.id === id && todo.userId === userId);
+  if (!todos.some((todo) => todo.id === id && todo.userId === userId)) {
+    throw new NotFoundError("Todo not found");
+  } else {
+    return todos.find((todo) => todo.id === id && todo.userId === userId);
+  }
 };
 
 export const addTodo = (todo: Todo, userId: string) => {
@@ -44,11 +51,19 @@ export const addTodo = (todo: Todo, userId: string) => {
 };
 
 export const deleteTodo = (id: string, userId: string) => {
-  todos = todos.filter((todo) => todo.userId === userId && todo.id !== id);
+  if (!todos.some((todo) => todo.id === id && todo.userId === userId)) {
+    throw new NotFoundError("Todo not found");
+  } else {
+    todos = todos.filter((todo) => todo.userId === userId && todo.id !== id);
+  }
 };
 
 export const updateTodo = (id: string, todo: Todo, userId: string) => {
-  todos = todos.map((t) =>
-    t.id === id && t.userId === userId ? { ...todo, id } : t
-  );
+  if (!todos.some((todo) => todo.id === id && todo.userId === userId)) {
+    throw new NotFoundError(`No Todo exists of id ${id}`);
+  } else {
+    todos = todos.map((t) =>
+      t.id === id && t.userId === userId ? { ...todo, id } : t
+    );
+  }
 };

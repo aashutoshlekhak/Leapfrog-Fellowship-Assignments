@@ -16,6 +16,10 @@ export function getUsers() {
   return users;
 }
 
+export function getUserById(id: string) {
+  return users.find(({ id: userId }) => userId == id);
+}
+
 export function createUser(user: User) {
   count++;
   return users.push({
