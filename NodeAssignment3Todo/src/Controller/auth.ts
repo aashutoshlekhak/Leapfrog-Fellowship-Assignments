@@ -11,6 +11,7 @@ export async function login(req: Request, res: Response) {
     res.json(data);
   } catch (e) {
     logger.error("Login failed", e);
+    return res.sendStatus(401);
   }
 }
 
@@ -22,5 +23,6 @@ export async function refresh(req: Request, res: Response) {
     res.json(data);
   } catch (e) {
     logger.error("Refresh failed", e);
+    return res.sendStatus(401);
   }
 }

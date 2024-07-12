@@ -1,4 +1,3 @@
-import { NotFoundError } from "../error/Errors";
 import { Todo } from "../interfaces/todo";
 
 let todos: Todo[] = [

@@ -12,7 +12,7 @@ export const getTodos = (req: Request, res: Response, next: NextFunction) => {
     const data = todoService.getTodos(userId);
     res.status(HttpStatusCodes.OK).json(data);
   } catch (e) {
-    logger.error(`Error fetching todos for user ${userId}: ${e.message}`);
+    logger.error(`Error fetching todos for user ${userId}`);
     next(e);
   }
 };
@@ -33,9 +33,7 @@ export const getTodoById = (
     }
     res.status(HttpStatusCodes.OK).json(data);
   } catch (e) {
-    logger.error(
-      `Error fetching todo with id ${id} for user ${userId}: ${e.message}`
-    );
+    logger.error(`Error fetching todo with id ${id} for user ${userId}`);
     next(e);
   }
 };
@@ -52,7 +50,7 @@ export const addTodo = (req: Request, res: Response, next: NextFunction) => {
     });
     logger.info(`Todo added successfully for user ${userId}`);
   } catch (e) {
-    logger.error(`Error adding todo for user ${userId}: ${e.message}`);
+    logger.error(`Error adding todo for user ${userId}`);
     next(e);
   }
 };
@@ -67,9 +65,7 @@ export const deleteTodo = (req: Request, res: Response, next: NextFunction) => {
     });
     logger.info(`Todo with id ${id} deleted successfully for user ${userId}`);
   } catch (e) {
-    logger.error(
-      `Error deleting todo with id ${id} for user ${userId}: ${e.message}`
-    );
+    logger.error(`Error deleting todo with id ${id} for user ${userId}`);
     next(e);
   }
 };
@@ -85,9 +81,7 @@ export const updateTodo = (req: Request, res: Response, next: NextFunction) => {
     });
     logger.info(`Todo with id ${id} updated successfully for user ${userId}`);
   } catch (e) {
-    logger.error(
-      `Error updating todo with id ${id} for user ${userId}: ${e.message}`
-    );
+    logger.error(`Error updating todo with id ${id} for user ${userId}`);
     next(e);
   }
 };
