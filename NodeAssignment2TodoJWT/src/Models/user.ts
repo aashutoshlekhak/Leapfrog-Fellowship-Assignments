@@ -8,7 +8,7 @@ let users: User[] = [
     id: "1",
   },
 ];
-
+ 
 let count = users.length;
 
 export function getUsers() {

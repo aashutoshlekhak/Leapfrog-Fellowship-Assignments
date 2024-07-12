@@ -8,9 +8,6 @@ export const createTodoBodySchema = Joi.object({
 
   description: Joi.string().optional(),
 
-  userId: Joi.string().required().messages({
-    "any.required": "User ID is required",
-  }),
 }).options({
   stripUnknown: true,
 });
@@ -25,9 +22,6 @@ export const updateTodoBodySchema = Joi.object({
 
   description: Joi.string().optional(),
 
-  userId: Joi.string().required().messages({
-    "any.required": "User ID is required",
-  }),
 }).options({
   stripUnknown: true,
 });

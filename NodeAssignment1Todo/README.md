@@ -2,6 +2,20 @@
 
 ## Local Setup
 
+## Using docker
+
+```sh
+    # Pull the Docker image
+    docker pull aashutoshlekhak/todo-app
+
+    # Run the Docker container
+    docker run -p 3000:3000  aashutoshlekhak/todo-app:v.1.0
+
+
+```
+
+### Install (Without using docker)
+
 - Install Node.js on your system, here is the link:
   [Node.js](https://nodejs.org/en)
 
@@ -9,7 +23,7 @@
 
     git clone https://github.com/aashutoshlekhak/Leapfrog-Fellowship-Assignments.git
 
-    cd NodeAssignment2TodoJWT
+    cd NodeAssignment1Todo
 
     npm install
 
@@ -22,44 +36,6 @@
 ```
 
 # API routes/paths
-
-## Authentication
-
-First create a user account
-
-- http://localhost:3000/user (POST request)
-
-  payload in body
-
-```sh
-    {
-    name: "User 1",
-    email: "user@user.com",
-    password: "password",
-    }
-```
-
-- With this email and password, you can login
-- http://localhost:3000/auth/login (POST request)
-
-  - This will return access token and refresn token.
-  - Paste the access token in the header as Bearer token.
-  - After this you can navigate to other routes
-
-- For generating new access token
-  - Navigate to:
-  - http://localhost:3000/auth/refresh
-    - and paste the refresh token generated previously during login as a bearer token
-
-# Other Routes
-* They will run only after authentication
-
-## For user
-
-- http://localhost:3000/user (GET request)
-  - This retrieves all the user
-
-## For Todos
 
 ### To see all todos
 
