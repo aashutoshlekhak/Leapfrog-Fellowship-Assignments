@@ -80,7 +80,9 @@ describe("User Integration Test Suite", () => {
         })
         .expect(200)
         .then((response) => {
-          expect(response.body.message).toBe("User updated");
+          expect(response.body.message).toBe(
+            `User of id ${testUser.id} updated successfully`
+          );
           done();
         })
         .catch(done);
@@ -94,7 +96,9 @@ describe("User Integration Test Suite", () => {
         .set("Authorization", `Bearer ${config.testToken}`)
         .expect(200)
         .then((response) => {
-          expect(response.body.message).toBe("User deleted");
+          expect(response.body.message).toBe(
+            `User of ${testUser.id} deleted successfully`
+          );
           done();
         })
         .catch(done);

@@ -36,7 +36,9 @@ export async function createUser(
     const { body } = req;
     const data = await userService.createUser(body);
     logger.info(data);
-    res.status(HttpStatusCodes.CREATED).json(data);
+    res
+      .status(HttpStatusCodes.CREATED)
+      .json({ ...data, message: "User created" });
   } catch (error) {
     next(error);
   }
@@ -55,5 +57,5 @@ export async function updateUser(req: Request, res: Response) {
   const { id } = req.params;
   await userService.updateUser(id, req.body);
   logger.info(`User of ${id} updated successfully`);
-  res.status(HttpStatusCodes.OK).json(`User of ${id} updated successfully`);
+  res.status(HttpStatusCodes.OK).json({message: `User of id ${id} updated successfully`});
 }
