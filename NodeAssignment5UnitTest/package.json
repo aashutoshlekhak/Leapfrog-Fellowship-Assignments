@@ -1,0 +1,48 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "This is a backend of a minimal todo application",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/index.ts",
+    "test": "mocha --require ts-node/register 'src/test/**/*.test.ts'",
+    "test:integration": "mocha --require ts-node/register 'src/test/**/*.test.ts'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.21",
+    "@types/express-rate-limit": "^6.0.0",
+    "@types/joi": "^17.2.3",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/mocha": "^10.0.7",
+    "@types/sinon": "^17.0.3",
+    "@types/supertest": "^6.0.2",
+    "@types/typescript": "^2.0.0",
+    "@types/winston": "^2.4.4",
+    "mocha": "^10.6.0",
+    "sinon": "^18.0.0",
+    "supertest": "^7.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@types/jest": "^29.5.12",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "helmet": "^7.1.0",
+    "http-status-codes": "^2.3.0",
+    "jest": "^29.7.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.4",
+    "ts-jest": "^29.2.2",
+    "winston": "^3.13.1"
+  }
+}
