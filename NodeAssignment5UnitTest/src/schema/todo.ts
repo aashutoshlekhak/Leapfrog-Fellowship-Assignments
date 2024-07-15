@@ -7,7 +7,6 @@ export const createTodoBodySchema = Joi.object({
   }),
 
   description: Joi.string().optional(),
-
 }).options({
   stripUnknown: true,
 });
@@ -21,7 +20,6 @@ export const updateTodoBodySchema = Joi.object({
   title: Joi.string().optional(),
 
   description: Joi.string().optional(),
-
 }).options({
   stripUnknown: true,
 });
@@ -30,10 +28,6 @@ export const updateTodoBodySchema = Joi.object({
 export const getTodoQuerySchema = Joi.object({
   id: Joi.string().required().messages({
     "any.required": "ID is required",
-  }),
-
-  userId: Joi.string().required().messages({
-    "any.required": "User ID is required",
   }),
 }).options({
   stripUnknown: true,

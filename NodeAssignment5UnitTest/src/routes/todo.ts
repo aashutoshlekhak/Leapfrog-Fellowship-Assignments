@@ -9,6 +9,7 @@ import {
 import { authenticate, authorize } from "../middlewares/auth";
 import {
   validateReqBody,
+  validateReqParam,
   validateReqQuery,
   validateReqQueryAndBody,
 } from "../middlewares/validator";
@@ -16,18 +17,19 @@ import { createTodoBodySchema, getTodoQuerySchema } from "../schema/todo";
 const router = express.Router();
 
 router.get("/", authenticate, getTodos);
-router.get("/:id", authenticate);
+router.get("/:id", authenticate, getTodoById);
 router.post("/", authenticate, validateReqBody(createTodoBodySchema), addTodo);
 router.delete(
   "/:id",
   authenticate,
-  validateReqQuery(getTodoQuerySchema),
+  validateReqParam(getTodoQuerySchema),
   deleteTodo
 );
 router.put(
   "/:id",
   authenticate,
-  validateReqQueryAndBody(getTodoQuerySchema, createTodoBodySchema),
+  validateReqParam(getTodoQuerySchema),
+  validateReqBody(createTodoBodySchema),
   updateTodo
 );
 

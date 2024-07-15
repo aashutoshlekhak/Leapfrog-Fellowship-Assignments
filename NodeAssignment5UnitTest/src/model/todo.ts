@@ -51,8 +51,8 @@ export const deleteTodo = (id: string, userId: string) => {
 
 export const updateTodo = (id: string, todo: Todo, userId: string) => {
   todos = todos.map((t) =>
-    t.id === id && t.userId === userId ? { ...todo, id } : t
+    t.id === id && t.userId === userId
+      ? { ...todo, id: id, userId: userId, createdAt: new Date() }
+      : t
   );
 };
-
-
