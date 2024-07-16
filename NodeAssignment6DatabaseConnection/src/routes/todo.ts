@@ -5,7 +5,7 @@ import {
   getTodoById,
   getTodos,
   updateTodo,
-} from "../Controller/todo";
+} from "../controller/todo";
 import { authenticate, authorize } from "../middlewares/auth";
 import {
   validateReqBody,

@@ -7,7 +7,7 @@ import {
   updateUser,
   deleteUser,
   getUserById,
-} from "../Controller/user";
+} from "../controller/user";
 import { createUserBodySchema, getUserQuerySchema } from "../schema/user";
 import {
   validateReqBody,
