@@ -4,8 +4,8 @@ import loggerWithNameSpace from "../utils/logger";
 
 const logger = loggerWithNameSpace("AuthController");
 export async function login(req: Request, res: Response) {
-  const { body } = req;
   try {
+    const { body } = req;
     logger.info(`Login request with ${body}`);
     const data = await AuthService.login(body);
     res.json(data);

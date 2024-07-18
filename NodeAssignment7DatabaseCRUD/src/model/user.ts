@@ -34,6 +34,44 @@ export class UserModel extends BaseModel {
       throw new ConflictError("User already exists");
     }
   }
+
+  static getUsersById(id: string) {
+    try {
+      return this.queryBuilder()
+        .select("id", "name", "email")
+        .table("users")
+        .where("id", id);
+    } catch (error) {
+      throw new ConflictError("User with given id does not exists");
+    }
+  }
+
+  static getUserByEmail(email: string) {
+    try {
+      return this.queryBuilder()
+        .select("id", "name", "email", "password")
+        .table("users")
+        .where({email}).first();
+    } catch (error) {
+      throw new ConflictError("User with given email does not exists");
+    }
+  }
+
+  static async updateUser(id: string, user: User) {
+    try {
+      await this.queryBuilder().update(user).table("users").where("id", id);
+    } catch (error) {
+      throw new ConflictError("User with given id does not exists");
+    }
+  }
+
+  static async deleteUser(id: string) {
+    try {
+      await this.queryBuilder().delete().table("users").where("id", id);
+    } catch (error) {
+      throw new ConflictError("User with given id does not exists");
+    }
+  }
 }
 
 export class PermissionModel extends BaseModel {
@@ -55,26 +93,26 @@ let count = users.length;
 //   return users;
 // }
 
-export function getUserById(id: string) {
-  return users.find(({ id: userId }) => userId == id);
-}
+// export function getUserById(id: string) {
+//   return users.find(({ id: userId }) => userId == id);
+// }
 
-export function createUser(user: User) {
-  count++;
-  return users.push({
-    ...user,
-    id: `${count}`,
-  });
-}
+// export function createUser(user: User) {
+//   count++;
+//   return users.push({
+//     ...user,
+//     id: `${count}`,
+//   });
+// }
 
-export function getUserByEmail(email: string) {
-  return users.find(({ email: userEmail }) => userEmail == email);
-}
+// export function getUserByEmail(email: string) {
+//   return users.find(({ email: userEmail }) => userEmail == email);
+// }
 
-export function deleteUser(id: string) {
-  users = users.filter(({ id: userId }) => userId != id);
-}
+// export function deleteUser(id: string) {
+//   users = users.filter(({ id: userId }) => userId != id);
+// }
 
-export function updateUser(id: string, body: User) {
-  users = users.map((user) => (user.id == id ? { ...user, ...body } : user));
-}
+// export function updateUser(id: string, body: User) {
+//   users = users.map((user) => (user.id == id ? { ...user, ...body } : user));
+// }
