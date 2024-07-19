@@ -3,7 +3,7 @@ import { Todo } from "../interfaces/todo";
 import { NotFoundError } from "../error/Errors";
 
 export const getTodos = (userId: string) => {
-  const todos = todoModel.getTodos(userId);
+  const todos = todoModel.TodoModel.getTodos(userId);
   if (!todos) {
     throw new Error("Todos not found");
   }
@@ -11,7 +11,7 @@ export const getTodos = (userId: string) => {
 };
 
 export const getTodoById = (id: string, userId: string) => {
-  const todo = todoModel.getTodoById(id, userId);
+  const todo = todoModel.TodoModel.getTodoById(id, userId);
   if (!todo) {
     throw new NotFoundError("Todo not found");
   }
@@ -19,20 +19,20 @@ export const getTodoById = (id: string, userId: string) => {
 };
 
 export const addTodo = (todo: Todo, userId: string) =>
-  todoModel.addTodo(todo, userId);
+  todoModel.TodoModel.create(todo, userId);
 
 export const deleteTodo = (id: string, userId: string) => {
-  const todo = todoModel.getTodoById(id, userId);
+  const todo = todoModel.TodoModel.getTodoById(id, userId);
   if (!todo) {
     throw new NotFoundError(`Todo of id ${id} not found`);
   }
-  todoModel.deleteTodo(id, userId);
+  todoModel.TodoModel.deleteTodo(id, userId);
 };
 
 export const updateTodo = (id: string, todo: Todo, userId: string) => {
-  const oldTodo = todoModel.getTodoById(id, userId);
+  const oldTodo = todoModel.TodoModel.getTodoById(id, userId);
   if (!oldTodo) {
     throw new NotFoundError(`Todo of id ${id} not found`);
   }
-  todoModel.updateTodo(id, todo, userId);
+  todoModel.TodoModel.updateTodo(id, todo, userId);
 };

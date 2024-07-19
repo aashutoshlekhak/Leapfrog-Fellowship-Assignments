@@ -87,32 +87,3 @@ export class PermissionModel extends BaseModel {
   }
 }
 
-let count = users.length;
-
-// export function getUsers() {
-//   return users;
-// }
-
-// export function getUserById(id: string) {
-//   return users.find(({ id: userId }) => userId == id);
-// }
-
-// export function createUser(user: User) {
-//   count++;
-//   return users.push({
-//     ...user,
-//     id: `${count}`,
-//   });
-// }
-
-// export function getUserByEmail(email: string) {
-//   return users.find(({ email: userEmail }) => userEmail == email);
-// }
-
-// export function deleteUser(id: string) {
-//   users = users.filter(({ id: userId }) => userId != id);
-// }
-
-// export function updateUser(id: string, body: User) {
-//   users = users.map((user) => (user.id == id ? { ...user, ...body } : user));
-// }

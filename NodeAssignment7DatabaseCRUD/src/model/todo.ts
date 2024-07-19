@@ -1,4 +1,5 @@
 import { Todo } from "../interfaces/todo";
+import { BaseModel } from "./base";
 
 export let todos: Todo[] = [
   {
@@ -26,33 +27,60 @@ export let todos: Todo[] = [
 
 let count = todos.length;
 
-export const getTodos = (userId: string) => {
-  const todos1 = todos.filter((todo) => todo.userId === userId);
-  return todos1;
-};
 
-export const getTodoById = (id: string, userId: string) => {
-  return todos.find((todo) => todo.id === id && todo.userId === userId);
-};
 
-export const addTodo = (todo: Todo, userId: string) => {
-  count++;
-  const newTodo = {
-    ...todo,
-    id: `${count}`,
-    userId: userId,
-  };
-  todos.push(newTodo);
-};
+export class TodoModel extends BaseModel {
+  static async create(todo: Todo, userId: string) {
+    try {
+      const todoToCreate = {
+        ...todo,
+        userId: userId,
+      };
+      await this.queryBuilder().insert(todoToCreate).table("todos");
+    } catch (error) {
+      throw new error();
+    }
+  }
 
-export const deleteTodo = (id: string, userId: string) => {
-  todos = todos.filter((todo) => todo.userId === userId && todo.id !== id);
-};
+  static getTodos(userId: string) {
+    try {
+      return this.queryBuilder()
+        .select("*")
+        .table("todos")
+        .where("userId", userId);
+    } catch (error) {
+      throw new error();
+    }
+  }
 
-export const updateTodo = (id: string, todo: Todo, userId: string) => {
-  todos = todos.map((t) =>
-    t.id === id && t.userId === userId
-      ? { ...todo, id: id, userId: userId, createdAt: new Date() }
-      : t
-  );
-};
+  static getTodoById(id: string, userId: string) {
+    try {
+      return this.queryBuilder()
+        .select("*")
+        .table("todos")
+        .where({ id, userId })
+        .first();
+    } catch (error) {
+      throw new error();
+    }
+  }
+
+  static async deleteTodo(id: string, userId: string) {
+    try {
+      await this.queryBuilder().delete().table("todos").where({ id, userId });
+    } catch (error) {
+      throw new error();
+    }
+  }
+
+  static async updateTodo(id: string, todo: Todo, userId: string) {
+    try {
+      await this.queryBuilder()
+        .update(todo)
+        .table("todos")
+        .where({ id, userId });
+    } catch (error) {
+      throw new error();
+    }
+  }
+}
